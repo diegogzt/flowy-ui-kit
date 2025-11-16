@@ -305,6 +305,62 @@ function App() {
                 <div className="w-10 h-10 rounded-full bg-electric-dark border-2 border-white shadow-sm" title="#0A0E27"></div>
               </div>
             </a>
+
+            {/* Mint Fresh */}
+            <a href="#mint" className="block p-4 rounded-lg border-2 border-gray-200 hover:border-mint-primary hover:shadow-md transition-all bg-white">
+              <div className="flex items-center gap-3 mb-3">
+                <span className="text-2xl">🌿</span>
+                <h3 className="font-bold text-lg text-dark">Mint Fresh</h3>
+              </div>
+              <div className="flex gap-2">
+                <div className="w-10 h-10 rounded-full bg-mint-primary border-2 border-white shadow-sm" title="#1F756E"></div>
+                <div className="w-10 h-10 rounded-full bg-mint-secondary border-2 border-white shadow-sm" title="#5DDCC3"></div>
+                <div className="w-10 h-10 rounded-full bg-mint-accent border-2 border-white shadow-sm" title="#C8E86C"></div>
+                <div className="w-10 h-10 rounded-full bg-mint-lime border-2 border-white shadow-sm" title="#D3EB70"></div>
+              </div>
+            </a>
+
+            {/* Purple Storm */}
+            <a href="#purple" className="block p-4 rounded-lg border-2 border-gray-200 hover:border-purple-primary hover:shadow-md transition-all bg-white">
+              <div className="flex items-center gap-3 mb-3">
+                <span className="text-2xl">⚡</span>
+                <h3 className="font-bold text-lg text-dark">Purple Storm</h3>
+              </div>
+              <div className="flex gap-2">
+                <div className="w-10 h-10 rounded-full bg-purple-primary border-2 border-white shadow-sm" title="#5856D6"></div>
+                <div className="w-10 h-10 rounded-full bg-purple-secondary border-2 border-white shadow-sm" title="#475569"></div>
+                <div className="w-10 h-10 rounded-full bg-purple-slate border-2 border-white shadow-sm" title="#64748B"></div>
+                <div className="w-10 h-10 rounded-full bg-purple-dark border-2 border-white shadow-sm" title="#1E293B"></div>
+              </div>
+            </a>
+
+            {/* Meadow */}
+            <a href="#meadow" className="block p-4 rounded-lg border-2 border-gray-200 hover:border-meadow-primary hover:shadow-md transition-all bg-white">
+              <div className="flex items-center gap-3 mb-3">
+                <span className="text-2xl">🍃</span>
+                <h3 className="font-bold text-lg text-dark">Meadow</h3>
+              </div>
+              <div className="flex gap-2">
+                <div className="w-10 h-10 rounded-full bg-meadow-primary border-2 border-white shadow-sm" title="#0F5C55"></div>
+                <div className="w-10 h-10 rounded-full bg-meadow-secondary border-2 border-white shadow-sm" title="#7CE5D3"></div>
+                <div className="w-10 h-10 rounded-full bg-meadow-accent border-2 border-white shadow-sm" title="#E1F542"></div>
+                <div className="w-10 h-10 rounded-full bg-meadow-soft border-2 border-white shadow-sm" title="#B8F1E8"></div>
+              </div>
+            </a>
+
+            {/* Twilight */}
+            <a href="#twilight" className="block p-4 rounded-lg border-2 border-gray-200 hover:border-twilight-primary hover:shadow-md transition-all bg-white">
+              <div className="flex items-center gap-3 mb-3">
+                <span className="text-2xl">🌌</span>
+                <h3 className="font-bold text-lg text-dark">Twilight</h3>
+              </div>
+              <div className="flex gap-2">
+                <div className="w-10 h-10 rounded-full bg-twilight-primary border-2 border-white shadow-sm" title="#4338CA"></div>
+                <div className="w-10 h-10 rounded-full bg-twilight-secondary border-2 border-white shadow-sm" title="#6B7280"></div>
+                <div className="w-10 h-10 rounded-full bg-twilight-indigo border-2 border-white shadow-sm" title="#6366F1"></div>
+                <div className="w-10 h-10 rounded-full bg-twilight-dark border-2 border-white shadow-sm" title="#111827"></div>
+              </div>
+            </a>
           </div>
         </div>
       </nav>
@@ -2011,6 +2067,422 @@ function App() {
               </div>
               <div className="bg-electric-accent bg-opacity-20 border-l-4 border-electric-accent p-4 rounded">
                 <p className="text-electric-dark font-semibold">ℹ Nueva actualización disponible</p>
+              </div>
+            </div>
+          </div>
+        </section>
+
+        {/* PALETA MINT FRESH */}
+        <section id="mint" className="mb-16 pb-12 border-b-2 border-mint-beige scroll-mt-8">
+          <div className="bg-mint-light rounded-lg px-4 py-2 mb-6 inline-block">
+            <h2 className="text-4xl font-bold text-mint-dark">🌿 Paleta Mint Fresh</h2>
+          </div>
+
+          {/* Calendar with Reservations */}
+          <div className="mb-12">
+            <h3 className="text-heading-2 text-mint-primary font-bold mb-6">
+              Calendario con Reservas
+            </h3>
+            <div className="bg-white border-2 border-mint-beige rounded-xl p-8">
+              <CalendarReservations palette="mint" />
+            </div>
+          </div>
+
+          {/* Buttons */}
+          <div className="mb-8">
+            <h3 className="text-heading-3 text-mint-primary font-bold mb-4">Botones</h3>
+            <div className="bg-white border-2 border-mint-beige rounded-xl p-8 flex flex-wrap gap-4">
+              <button className="px-6 py-3 bg-mint-primary text-white rounded-lg font-semibold hover:opacity-90 transition-opacity">
+                Verde Azulado
+              </button>
+              <button className="px-6 py-3 bg-mint-secondary text-mint-dark rounded-lg font-semibold hover:opacity-90 transition-opacity">
+                Aqua
+              </button>
+              <button className="px-6 py-3 bg-mint-accent text-mint-dark rounded-lg font-semibold hover:opacity-90 transition-opacity">
+                Lima
+              </button>
+              <button className="px-6 py-3 bg-mint-lime text-mint-dark rounded-lg font-semibold hover:opacity-90 transition-opacity">
+                Verde Claro
+              </button>
+              <button className="px-6 py-3 border-2 border-mint-primary text-mint-primary rounded-lg font-semibold hover:bg-mint-light transition-colors">
+                Outline
+              </button>
+            </div>
+          </div>
+
+          {/* Cards */}
+          <div className="mb-8">
+            <h3 className="text-heading-3 text-mint-primary font-bold mb-4">Tarjetas</h3>
+            <div className="grid grid-cols-1 md:grid-cols-3 gap-6">
+              <div className="bg-white border-2 border-mint-beige rounded-xl p-6 shadow-sm">
+                <div className="mb-3">
+                  <span className="px-3 py-1 bg-mint-primary text-white text-sm font-semibold rounded-full">
+                    Nuevo
+                  </span>
+                </div>
+                <h4 className="text-lg font-bold text-mint-dark mb-2">Reserva Express</h4>
+                <p className="text-gray-700 mb-4">
+                  Gestiona tus reservas de forma rápida y sencilla.
+                </p>
+                <button className="w-full px-4 py-2 bg-mint-secondary text-mint-dark rounded-lg font-semibold hover:opacity-90">
+                  Ver más
+                </button>
+              </div>
+              <div className="bg-white border-2 border-mint-beige rounded-xl p-6 shadow-sm">
+                <div className="mb-3">
+                  <span className="px-3 py-1 bg-mint-accent text-mint-dark text-sm font-semibold rounded-full">
+                    Popular
+                  </span>
+                </div>
+                <h4 className="text-lg font-bold text-mint-dark mb-2">Eventos Especiales</h4>
+                <p className="text-gray-700 mb-4">
+                  Organiza eventos únicos con herramientas avanzadas.
+                </p>
+                <button className="w-full px-4 py-2 bg-mint-primary text-white rounded-lg font-semibold hover:opacity-90">
+                  Explorar
+                </button>
+              </div>
+              <div className="bg-white border-2 border-mint-beige rounded-xl p-6 shadow-sm">
+                <div className="mb-3">
+                  <span className="px-3 py-1 bg-mint-lime text-mint-dark text-sm font-semibold rounded-full">
+                    Premium
+                  </span>
+                </div>
+                <h4 className="text-lg font-bold text-mint-dark mb-2">Analytics Pro</h4>
+                <p className="text-gray-700 mb-4">
+                  Analiza el rendimiento de tus reservas en tiempo real.
+                </p>
+                <button className="w-full px-4 py-2 bg-mint-accent text-mint-dark rounded-lg font-semibold hover:opacity-90">
+                  Activar
+                </button>
+              </div>
+            </div>
+          </div>
+
+          {/* Alerts */}
+          <div className="mb-8">
+            <h3 className="text-heading-3 text-mint-primary font-bold mb-4">Alertas</h3>
+            <div className="bg-white border-2 border-mint-beige rounded-xl p-8 space-y-4">
+              <div className="bg-mint-light border-l-4 border-mint-primary p-4 rounded">
+                <p className="text-mint-dark font-semibold">✓ Reserva confirmada exitosamente</p>
+              </div>
+              <div className="bg-mint-secondary bg-opacity-20 border-l-4 border-mint-secondary p-4 rounded">
+                <p className="text-mint-dark font-semibold">⚠ Verifica los datos de contacto</p>
+              </div>
+              <div className="bg-mint-accent bg-opacity-20 border-l-4 border-mint-accent p-4 rounded">
+                <p className="text-mint-dark font-semibold">ℹ Nueva actualización disponible</p>
+              </div>
+            </div>
+          </div>
+        </section>
+
+        {/* PALETA PURPLE STORM */}
+        <section id="purple" className="mb-16 pb-12 border-b-2 border-purple-beige scroll-mt-8">
+          <div className="bg-purple-light rounded-lg px-4 py-2 mb-6 inline-block">
+            <h2 className="text-4xl font-bold text-purple-dark">⚡ Paleta Purple Storm</h2>
+          </div>
+
+          {/* Calendar with Reservations */}
+          <div className="mb-12">
+            <h3 className="text-heading-2 text-purple-primary font-bold mb-6">
+              Calendario con Reservas
+            </h3>
+            <div className="bg-white border-2 border-purple-beige rounded-xl p-8">
+              <CalendarReservations palette="purple" />
+            </div>
+          </div>
+
+          {/* Buttons */}
+          <div className="mb-8">
+            <h3 className="text-heading-3 text-purple-primary font-bold mb-4">Botones</h3>
+            <div className="bg-white border-2 border-purple-beige rounded-xl p-8 flex flex-wrap gap-4">
+              <button className="px-6 py-3 bg-purple-primary text-white rounded-lg font-semibold hover:opacity-90 transition-opacity">
+                Morado
+              </button>
+              <button className="px-6 py-3 bg-purple-secondary text-white rounded-lg font-semibold hover:opacity-90 transition-opacity">
+                Gris Azulado
+              </button>
+              <button className="px-6 py-3 bg-purple-slate text-white rounded-lg font-semibold hover:opacity-90 transition-opacity">
+                Slate
+              </button>
+              <button className="px-6 py-3 bg-purple-dark text-white rounded-lg font-semibold hover:opacity-90 transition-opacity">
+                Oscuro
+              </button>
+              <button className="px-6 py-3 border-2 border-purple-primary text-purple-primary rounded-lg font-semibold hover:bg-purple-light transition-colors">
+                Outline
+              </button>
+            </div>
+          </div>
+
+          {/* Cards */}
+          <div className="mb-8">
+            <h3 className="text-heading-3 text-purple-primary font-bold mb-4">Tarjetas</h3>
+            <div className="grid grid-cols-1 md:grid-cols-3 gap-6">
+              <div className="bg-white border-2 border-purple-beige rounded-xl p-6 shadow-sm">
+                <div className="mb-3">
+                  <span className="px-3 py-1 bg-purple-primary text-white text-sm font-semibold rounded-full">
+                    Nuevo
+                  </span>
+                </div>
+                <h4 className="text-lg font-bold text-purple-dark mb-2">Reserva Express</h4>
+                <p className="text-gray-700 mb-4">
+                  Gestiona tus reservas de forma rápida y sencilla.
+                </p>
+                <button className="w-full px-4 py-2 bg-purple-secondary text-white rounded-lg font-semibold hover:opacity-90">
+                  Ver más
+                </button>
+              </div>
+              <div className="bg-white border-2 border-purple-beige rounded-xl p-6 shadow-sm">
+                <div className="mb-3">
+                  <span className="px-3 py-1 bg-purple-slate text-white text-sm font-semibold rounded-full">
+                    Popular
+                  </span>
+                </div>
+                <h4 className="text-lg font-bold text-purple-dark mb-2">Eventos Especiales</h4>
+                <p className="text-gray-700 mb-4">
+                  Organiza eventos únicos con herramientas avanzadas.
+                </p>
+                <button className="w-full px-4 py-2 bg-purple-primary text-white rounded-lg font-semibold hover:opacity-90">
+                  Explorar
+                </button>
+              </div>
+              <div className="bg-white border-2 border-purple-beige rounded-xl p-6 shadow-sm">
+                <div className="mb-3">
+                  <span className="px-3 py-1 bg-purple-dark text-white text-sm font-semibold rounded-full">
+                    Premium
+                  </span>
+                </div>
+                <h4 className="text-lg font-bold text-purple-dark mb-2">Analytics Pro</h4>
+                <p className="text-gray-700 mb-4">
+                  Analiza el rendimiento de tus reservas en tiempo real.
+                </p>
+                <button className="w-full px-4 py-2 bg-purple-secondary text-white rounded-lg font-semibold hover:opacity-90">
+                  Activar
+                </button>
+              </div>
+            </div>
+          </div>
+
+          {/* Alerts */}
+          <div className="mb-8">
+            <h3 className="text-heading-3 text-purple-primary font-bold mb-4">Alertas</h3>
+            <div className="bg-white border-2 border-purple-beige rounded-xl p-8 space-y-4">
+              <div className="bg-purple-light border-l-4 border-purple-primary p-4 rounded">
+                <p className="text-purple-dark font-semibold">✓ Reserva confirmada exitosamente</p>
+              </div>
+              <div className="bg-purple-secondary bg-opacity-20 border-l-4 border-purple-secondary p-4 rounded">
+                <p className="text-white font-semibold">⚠ Verifica los datos de contacto</p>
+              </div>
+              <div className="bg-purple-accent border-l-4 border-purple-slate p-4 rounded">
+                <p className="text-purple-dark font-semibold">ℹ Nueva actualización disponible</p>
+              </div>
+            </div>
+          </div>
+        </section>
+
+        {/* PALETA MEADOW */}
+        <section id="meadow" className="mb-16 pb-12 border-b-2 border-meadow-beige scroll-mt-8">
+          <div className="bg-meadow-light rounded-lg px-4 py-2 mb-6 inline-block">
+            <h2 className="text-4xl font-bold text-meadow-dark">🍃 Paleta Meadow</h2>
+          </div>
+
+          {/* Calendar with Reservations */}
+          <div className="mb-12">
+            <h3 className="text-heading-2 text-meadow-primary font-bold mb-6">
+              Calendario con Reservas
+            </h3>
+            <div className="bg-white border-2 border-meadow-beige rounded-xl p-8">
+              <CalendarReservations palette="meadow" />
+            </div>
+          </div>
+
+          {/* Buttons */}
+          <div className="mb-8">
+            <h3 className="text-heading-3 text-meadow-primary font-bold mb-4">Botones</h3>
+            <div className="bg-white border-2 border-meadow-beige rounded-xl p-8 flex flex-wrap gap-4">
+              <button className="px-6 py-3 bg-meadow-primary text-white rounded-lg font-semibold hover:opacity-90 transition-opacity">
+                Verde Profundo
+              </button>
+              <button className="px-6 py-3 bg-meadow-secondary text-meadow-dark rounded-lg font-semibold hover:opacity-90 transition-opacity">
+                Turquesa
+              </button>
+              <button className="px-6 py-3 bg-meadow-accent text-meadow-dark rounded-lg font-semibold hover:opacity-90 transition-opacity">
+                Neón Amarillo
+              </button>
+              <button className="px-6 py-3 bg-meadow-soft text-meadow-dark rounded-lg font-semibold hover:opacity-90 transition-opacity">
+                Aqua Suave
+              </button>
+              <button className="px-6 py-3 border-2 border-meadow-primary text-meadow-primary rounded-lg font-semibold hover:bg-meadow-light transition-colors">
+                Outline
+              </button>
+            </div>
+          </div>
+
+          {/* Cards */}
+          <div className="mb-8">
+            <h3 className="text-heading-3 text-meadow-primary font-bold mb-4">Tarjetas</h3>
+            <div className="grid grid-cols-1 md:grid-cols-3 gap-6">
+              <div className="bg-white border-2 border-meadow-beige rounded-xl p-6 shadow-sm">
+                <div className="mb-3">
+                  <span className="px-3 py-1 bg-meadow-primary text-white text-sm font-semibold rounded-full">
+                    Nuevo
+                  </span>
+                </div>
+                <h4 className="text-lg font-bold text-meadow-dark mb-2">Reserva Express</h4>
+                <p className="text-gray-700 mb-4">
+                  Gestiona tus reservas de forma rápida y sencilla.
+                </p>
+                <button className="w-full px-4 py-2 bg-meadow-secondary text-meadow-dark rounded-lg font-semibold hover:opacity-90">
+                  Ver más
+                </button>
+              </div>
+              <div className="bg-white border-2 border-meadow-beige rounded-xl p-6 shadow-sm">
+                <div className="mb-3">
+                  <span className="px-3 py-1 bg-meadow-accent text-meadow-dark text-sm font-semibold rounded-full">
+                    Popular
+                  </span>
+                </div>
+                <h4 className="text-lg font-bold text-meadow-dark mb-2">Eventos Especiales</h4>
+                <p className="text-gray-700 mb-4">
+                  Organiza eventos únicos con herramientas avanzadas.
+                </p>
+                <button className="w-full px-4 py-2 bg-meadow-primary text-white rounded-lg font-semibold hover:opacity-90">
+                  Explorar
+                </button>
+              </div>
+              <div className="bg-white border-2 border-meadow-beige rounded-xl p-6 shadow-sm">
+                <div className="mb-3">
+                  <span className="px-3 py-1 bg-meadow-soft text-meadow-dark text-sm font-semibold rounded-full">
+                    Premium
+                  </span>
+                </div>
+                <h4 className="text-lg font-bold text-meadow-dark mb-2">Analytics Pro</h4>
+                <p className="text-gray-700 mb-4">
+                  Analiza el rendimiento de tus reservas en tiempo real.
+                </p>
+                <button className="w-full px-4 py-2 bg-meadow-accent text-meadow-dark rounded-lg font-semibold hover:opacity-90">
+                  Activar
+                </button>
+              </div>
+            </div>
+          </div>
+
+          {/* Alerts */}
+          <div className="mb-8">
+            <h3 className="text-heading-3 text-meadow-primary font-bold mb-4">Alertas</h3>
+            <div className="bg-white border-2 border-meadow-beige rounded-xl p-8 space-y-4">
+              <div className="bg-meadow-light border-l-4 border-meadow-primary p-4 rounded">
+                <p className="text-meadow-dark font-semibold">✓ Reserva confirmada exitosamente</p>
+              </div>
+              <div className="bg-meadow-secondary bg-opacity-20 border-l-4 border-meadow-secondary p-4 rounded">
+                <p className="text-meadow-dark font-semibold">⚠ Verifica los datos de contacto</p>
+              </div>
+              <div className="bg-meadow-accent bg-opacity-20 border-l-4 border-meadow-accent p-4 rounded">
+                <p className="text-meadow-dark font-semibold">ℹ Nueva actualización disponible</p>
+              </div>
+            </div>
+          </div>
+        </section>
+
+        {/* PALETA TWILIGHT */}
+        <section id="twilight" className="pb-12 scroll-mt-8">
+          <div className="bg-twilight-light rounded-lg px-4 py-2 mb-6 inline-block">
+            <h2 className="text-4xl font-bold text-twilight-dark">🌌 Paleta Twilight</h2>
+          </div>
+
+          {/* Calendar with Reservations */}
+          <div className="mb-12">
+            <h3 className="text-heading-2 text-twilight-primary font-bold mb-6">
+              Calendario con Reservas
+            </h3>
+            <div className="bg-white border-2 border-twilight-beige rounded-xl p-8">
+              <CalendarReservations palette="twilight" />
+            </div>
+          </div>
+
+          {/* Buttons */}
+          <div className="mb-8">
+            <h3 className="text-heading-3 text-twilight-primary font-bold mb-4">Botones</h3>
+            <div className="bg-white border-2 border-twilight-beige rounded-xl p-8 flex flex-wrap gap-4">
+              <button className="px-6 py-3 bg-twilight-primary text-white rounded-lg font-semibold hover:opacity-90 transition-opacity">
+                Índigo
+              </button>
+              <button className="px-6 py-3 bg-twilight-secondary text-white rounded-lg font-semibold hover:opacity-90 transition-opacity">
+                Gris Neutro
+              </button>
+              <button className="px-6 py-3 bg-twilight-indigo text-white rounded-lg font-semibold hover:opacity-90 transition-opacity">
+                Índigo Claro
+              </button>
+              <button className="px-6 py-3 bg-twilight-dark text-white rounded-lg font-semibold hover:opacity-90 transition-opacity">
+                Negro
+              </button>
+              <button className="px-6 py-3 border-2 border-twilight-primary text-twilight-primary rounded-lg font-semibold hover:bg-twilight-light transition-colors">
+                Outline
+              </button>
+            </div>
+          </div>
+
+          {/* Cards */}
+          <div className="mb-8">
+            <h3 className="text-heading-3 text-twilight-primary font-bold mb-4">Tarjetas</h3>
+            <div className="grid grid-cols-1 md:grid-cols-3 gap-6">
+              <div className="bg-white border-2 border-twilight-beige rounded-xl p-6 shadow-sm">
+                <div className="mb-3">
+                  <span className="px-3 py-1 bg-twilight-primary text-white text-sm font-semibold rounded-full">
+                    Nuevo
+                  </span>
+                </div>
+                <h4 className="text-lg font-bold text-twilight-dark mb-2">Reserva Express</h4>
+                <p className="text-gray-700 mb-4">
+                  Gestiona tus reservas de forma rápida y sencilla.
+                </p>
+                <button className="w-full px-4 py-2 bg-twilight-secondary text-white rounded-lg font-semibold hover:opacity-90">
+                  Ver más
+                </button>
+              </div>
+              <div className="bg-white border-2 border-twilight-beige rounded-xl p-6 shadow-sm">
+                <div className="mb-3">
+                  <span className="px-3 py-1 bg-twilight-indigo text-white text-sm font-semibold rounded-full">
+                    Popular
+                  </span>
+                </div>
+                <h4 className="text-lg font-bold text-twilight-dark mb-2">Eventos Especiales</h4>
+                <p className="text-gray-700 mb-4">
+                  Organiza eventos únicos con herramientas avanzadas.
+                </p>
+                <button className="w-full px-4 py-2 bg-twilight-primary text-white rounded-lg font-semibold hover:opacity-90">
+                  Explorar
+                </button>
+              </div>
+              <div className="bg-white border-2 border-twilight-beige rounded-xl p-6 shadow-sm">
+                <div className="mb-3">
+                  <span className="px-3 py-1 bg-twilight-dark text-white text-sm font-semibold rounded-full">
+                    Premium
+                  </span>
+                </div>
+                <h4 className="text-lg font-bold text-twilight-dark mb-2">Analytics Pro</h4>
+                <p className="text-gray-700 mb-4">
+                  Analiza el rendimiento de tus reservas en tiempo real.
+                </p>
+                <button className="w-full px-4 py-2 bg-twilight-secondary text-white rounded-lg font-semibold hover:opacity-90">
+                  Activar
+                </button>
+              </div>
+            </div>
+          </div>
+
+          {/* Alerts */}
+          <div className="mb-8">
+            <h3 className="text-heading-3 text-twilight-primary font-bold mb-4">Alertas</h3>
+            <div className="bg-white border-2 border-twilight-beige rounded-xl p-8 space-y-4">
+              <div className="bg-twilight-light border-l-4 border-twilight-primary p-4 rounded">
+                <p className="text-twilight-dark font-semibold">✓ Reserva confirmada exitosamente</p>
+              </div>
+              <div className="bg-twilight-secondary bg-opacity-20 border-l-4 border-twilight-secondary p-4 rounded">
+                <p className="text-white font-semibold">⚠ Verifica los datos de contacto</p>
+              </div>
+              <div className="bg-twilight-accent border-l-4 border-twilight-indigo p-4 rounded">
+                <p className="text-twilight-dark font-semibold">ℹ Nueva actualización disponible</p>
               </div>
             </div>
           </div>

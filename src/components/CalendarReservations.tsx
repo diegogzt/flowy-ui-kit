@@ -8,7 +8,7 @@ interface Reservation {
 }
 
 interface CalendarReservationsProps {
-  palette?: "warm" | "cool" | "contrast" | "monochrome" | "sunset" | "nature" | "ocean" | "lavender" | "tropical" | "neon" | "fire" | "electric";
+  palette?: "warm" | "cool" | "contrast" | "monochrome" | "sunset" | "nature" | "ocean" | "lavender" | "tropical" | "neon" | "fire" | "electric" | "mint" | "purple" | "meadow" | "twilight";
 }
 
 const CalendarReservations = ({ palette = "warm" }: CalendarReservationsProps) => {
@@ -99,6 +99,34 @@ const CalendarReservations = ({ palette = "warm" }: CalendarReservationsProps) =
       accent: "#FFFF00",
       highlight: "#00FF7F",
       dark: "#8A2BE2",
+    },
+    mint: {
+      primary: "#1F756E",
+      secondary: "#5DDCC3",
+      accent: "#C8E86C",
+      highlight: "#D3EB70",
+      dark: "#EFEFEF",
+    },
+    purple: {
+      primary: "#5856D6",
+      secondary: "#475569",
+      accent: "#E5E7EB",
+      highlight: "#64748B",
+      dark: "#1E293B",
+    },
+    meadow: {
+      primary: "#0F5C55",
+      secondary: "#7CE5D3",
+      accent: "#E1F542",
+      highlight: "#B8F1E8",
+      dark: "#083832",
+    },
+    twilight: {
+      primary: "#4338CA",
+      secondary: "#6B7280",
+      accent: "#F3F4F6",
+      highlight: "#6366F1",
+      dark: "#111827",
     },
   };
 

@@ -116,6 +116,43 @@ module.exports = {
         "electric-dark": "#0A0E27",
         "electric-light": "#F0F8FF",
         "electric-beige": "#B0E0E6",
+
+        // Paleta Mint Fresh (De la imagen - fila superior)
+        "mint-primary": "#1F756E", // Oscuro verde azulado
+        "mint-secondary": "#5DDCC3", // Aqua claro
+        "mint-accent": "#C8E86C", // Verde lima
+        "mint-dark": "#163D39",
+        "mint-light": "#F2FFF9",
+        "mint-beige": "#E8F5F2",
+        "mint-cream": "#EFEFEF", // Gris claro de la imagen
+        "mint-lime": "#D3EB70", // Variación del verde lima
+
+        // Paleta Purple Storm (De la imagen - fila inferior)
+        "purple-primary": "#5856D6", // Morado/azul
+        "purple-secondary": "#475569", // Gris azulado
+        "purple-accent": "#E5E7EB", // Gris muy claro
+        "purple-dark": "#1E293B", // Negro azulado
+        "purple-light": "#F8FAFC",
+        "purple-beige": "#CBD5E1",
+        "purple-slate": "#64748B", // Gris intermedio
+
+        // Paleta Meadow (Variación de mint con más contraste)
+        "meadow-primary": "#0F5C55", // Verde oscuro profundo
+        "meadow-secondary": "#7CE5D3", // Turquesa brillante
+        "meadow-accent": "#E1F542", // Amarillo-verde neón
+        "meadow-dark": "#083832",
+        "meadow-light": "#F0FFF4",
+        "meadow-beige": "#D1F2EB",
+        "meadow-soft": "#B8F1E8", // Aqua suave
+
+        // Paleta Twilight (Variación de purple con más tonos)
+        "twilight-primary": "#4338CA", // Índigo intenso
+        "twilight-secondary": "#6B7280", // Gris neutro
+        "twilight-accent": "#F3F4F6", // Casi blanco
+        "twilight-dark": "#111827", // Negro puro
+        "twilight-light": "#FAFBFC",
+        "twilight-beige": "#E5E7EB",
+        "twilight-indigo": "#6366F1", // Índigo más claro
       },
       fontFamily: {
         sans: ["Inter", "system-ui", "-apple-system", "sans-serif"],
