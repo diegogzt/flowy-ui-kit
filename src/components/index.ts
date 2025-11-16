@@ -23,6 +23,7 @@ export { default as Table } from "./Table";
 export { default as List } from "./List";
 export { default as Tabs } from "./Tabs";
 export { default as Calendar } from "./Calendar";
+export { default as CalendarReservations } from "./CalendarReservations";
 
 // Auth
 export { default as Auth } from "./Auth";

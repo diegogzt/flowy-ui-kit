@@ -4,27 +4,30 @@ Bienvenido a **Flowy UI Kit**, un sistema completo de componentes React profesio
 
 ## 🚀 Acceso Rápido
 
-| Enlace | Descripción |
-|--------|------------|
-| 🌐 **[Demo en vivo](https://diegogzt.github.io/flowy-ui-kit/)** | Accede a la demostración interactiva (contraseña: flowy2025) |
-| 💻 **[Repositorio GitHub](https://github.com/diegogzt/flowy-ui-kit)** | Código fuente y gestión de issues |
-| 📚 **[README.md](README.md)** | Introducción y características principales |
+| Enlace                                                                | Descripción                                                  |
+| --------------------------------------------------------------------- | ------------------------------------------------------------ |
+| 🌐 **[Demo en vivo](https://diegogzt.github.io/flowy-ui-kit/)**       | Accede a la demostración interactiva (contraseña: flowy2025) |
+| 💻 **[Repositorio GitHub](https://github.com/diegogzt/flowy-ui-kit)** | Código fuente y gestión de issues                            |
+| 📚 **[README.md](README.md)**                                         | Introducción y características principales                   |
 
 ---
 
 ## 📚 Guías Disponibles
 
 ### Para usuarios
+
 - **[README.md](README.md)** - Guía general, características y ejemplos básicos
 - **[GUIDE.md](GUIDE.md)** - Documentación detallada de cada componente con ejemplos
 - **[DEPLOYMENT.md](DEPLOYMENT.md)** - Cómo acceder a GitHub Pages y solucionar problemas
 
 ### Para desarrolladores
+
 - **[SETUP.md](SETUP.md)** - Configuración de desarrollo local
 - **[CONTRIBUTING.md](CONTRIBUTING.md)** - Cómo contribuir al proyecto
 - **[PROJECT_SUMMARY.md](PROJECT_SUMMARY.md)** - Resumen técnico y estadísticas
 
 ### Documentación especializada
+
 - **[CALENDAR_COMPONENT.md](CALENDAR_COMPONENT.md)** - Guía completa del componente Calendar
 - **[FIGMA_DESIGN_IMPLEMENTATION.md](FIGMA_DESIGN_IMPLEMENTATION.md)** - Detalles de implementación del diseño
 
@@ -33,12 +36,14 @@ Bienvenido a **Flowy UI Kit**, un sistema completo de componentes React profesio
 ## 🎯 Comenzar rápidamente
 
 ### 1. Ver la demo
+
 ```
 Abre: https://diegogzt.github.io/flowy-ui-kit/
 Contraseña: flowy2025
 ```
 
 ### 2. Usar los componentes localmente
+
 ```bash
 # Clonar
 git clone https://github.com/diegogzt/flowy-ui-kit.git
@@ -55,6 +60,7 @@ npm run build
 ```
 
 ### 3. Importar en tu proyecto
+
 ```tsx
 import { Button, Card, Calendar } from './components';
 
@@ -68,6 +74,7 @@ import { Button, Card, Calendar } from './components';
 ## 🎨 20+ Componentes
 
 ### Botones & Acciones
+
 ```tsx
 import { Button, Link } from 'flowy-ui-kit';
 
@@ -76,6 +83,7 @@ import { Button, Link } from 'flowy-ui-kit';
 ```
 
 ### Alertas
+
 ```tsx
 import { Alert } from 'flowy-ui-kit';
 
@@ -84,6 +92,7 @@ import { Alert } from 'flowy-ui-kit';
 ```
 
 ### Formularios
+
 ```tsx
 import { Input, Select, Checkbox, Toggle } from 'flowy-ui-kit';
 
@@ -94,6 +103,7 @@ import { Input, Select, Checkbox, Toggle } from 'flowy-ui-kit';
 ```
 
 ### Datos
+
 ```tsx
 import { Card, Table, Tabs, Calendar } from 'flowy-ui-kit';
 
@@ -112,6 +122,7 @@ El sitio está protegido con un componente Auth personalizado:
 **Contraseña:** `flowy2025`
 
 Configurable en `.env`:
+
 ```env
 VITE_AUTH_PASSWORD=flowy2025
 ```
@@ -171,6 +182,7 @@ flowy-ui-kit/
 ## 🔗 Enlaces útiles
 
 ### Documentación
+
 - 📖 [README - Introducción](README.md)
 - 📚 [GUIDE - Componentes detallados](GUIDE.md)
 - ⚙️ [SETUP - Configuración local](SETUP.md)
@@ -178,6 +190,7 @@ flowy-ui-kit/
 - 🤝 [CONTRIBUTING - Cómo contribuir](CONTRIBUTING.md)
 
 ### Recursos externos
+
 - 🔗 [GitHub Repository](https://github.com/diegogzt/flowy-ui-kit)
 - 🌐 [Demo en vivo](https://diegogzt.github.io/flowy-ui-kit/)
 - 📦 [React Documentation](https://react.dev)
@@ -189,18 +202,23 @@ flowy-ui-kit/
 ## ❓ Preguntas frecuentes
 
 **¿Cuál es la contraseña?**
+
 > `flowy2025`
 
 **¿Cómo cambio la contraseña?**
+
 > Edita el archivo `.env` y cambia `VITE_AUTH_PASSWORD`
 
 **¿Puedo usar los componentes en mi proyecto?**
+
 > ¡Sí! Copia la carpeta `src/components` a tu proyecto e importa lo que necesites.
 
 **¿Cómo contribuyo?**
+
 > Lee [CONTRIBUTING.md](CONTRIBUTING.md) para instrucciones detalladas.
 
 **¿Se puede publicar en npm?**
+
 > Sí, pero actualmente solo está disponible en GitHub. Pronto en npm.
 
 ---

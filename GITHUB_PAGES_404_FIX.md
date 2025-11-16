@@ -9,6 +9,7 @@ El sitio mostraba **error 404** aunque el deploy fue exitoso. Esto es porque el 
 ### ✅ 1. Actualicé `vite.config.ts`
 
 **Antes:**
+
 ```typescript
 export default defineConfig({
   plugins: [react()],
@@ -28,6 +29,7 @@ export default defineConfig({
 ```
 
 **Después:**
+
 ```typescript
 export default defineConfig({
   plugins: [react()],
@@ -38,11 +40,13 @@ export default defineConfig({
 ### ✅ 2. Actualicé `index.html`
 
 **Antes:**
+
 ```html
 <script type="module" src="/flowy-ui-kit/src/main.tsx"></script>
 ```
 
 **Después:**
+
 ```html
 <script type="module" src="/src/main.tsx"></script>
 ```
@@ -51,12 +55,12 @@ El `base: "/flowy-ui-kit/"` en vite.config.ts se encarga automáticamente de agr
 
 ## ¿Qué cambió en el build?
 
-| Aspecto | Antes | Después |
-|---------|-------|---------|
-| Tipo | Librería (.js, .umd.js) | Aplicación web completa |
-| Salida | 2 archivos JS | HTML + JS + CSS en /dist |
-| Uso | Importar en otros proyectos | Sitio web completo |
-| GitHub Pages | ❌ No funciona | ✅ Funciona perfecto |
+| Aspecto      | Antes                       | Después                  |
+| ------------ | --------------------------- | ------------------------ |
+| Tipo         | Librería (.js, .umd.js)     | Aplicación web completa  |
+| Salida       | 2 archivos JS               | HTML + JS + CSS en /dist |
+| Uso          | Importar en otros proyectos | Sitio web completo       |
+| GitHub Pages | ❌ No funciona              | ✅ Funciona perfecto     |
 
 ## Ahora el build genera:
 

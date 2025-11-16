@@ -70,6 +70,7 @@ npm run preview
 **Problema**: Recibe error 404 en GitHub Pages
 
 **Solución**:
+
 1. Verifica que `vite.config.ts` tenga `base: "/flowy-ui-kit/"`
 2. Compila de nuevo: `npm run build`
 3. Haz push: `git push origin main`
@@ -80,6 +81,7 @@ npm run preview
 **Problema**: La página pide contraseña pero no deja entrar
 
 **Solución**:
+
 1. Asegúrate de que el `.env` existe con `VITE_AUTH_PASSWORD=flowy2025`
 2. La contraseña debe ser exactamente: `flowy2025` (sin espacios)
 3. Recarga la página (Cmd + Shift + R)
@@ -89,6 +91,7 @@ npm run preview
 **Problema**: Los colores y estilos no cargan correctamente
 
 **Solución**:
+
 1. Abre la consola del navegador (F12)
 2. Verifica que no haya errores 404 de CSS
 3. Borra la caché: Cmd + Shift + R

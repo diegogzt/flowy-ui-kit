@@ -1,19 +1,23 @@
 # 🔧 Habilitar GitHub Pages - Instrucciones
 
 ## ⚠️ Problema
+
 GitHub Pages no está habilitado en tu repositorio. Necesita ser activado desde la configuración.
 
 ## ✅ Solución (3 pasos)
 
 ### 1. Ir a Settings del repositorio
+
 1. Ve a: `https://github.com/diegogzt/flowy-ui-kit/settings`
 2. O desde GitHub: Repositorio → **Settings** (pestaña superior)
 
 ### 2. Encontrar "Pages" en el menú izquierdo
+
 - En el menú izquierdo, busca: **Pages** (en la sección "Code and automation")
 - Click en **Pages**
 
 ### 3. Configurar GitHub Pages
+
 En la sección "Build and deployment":
 
 1. **Source**: Selecciona `Deploy from a branch`
@@ -24,6 +28,7 @@ En la sección "Build and deployment":
 ## 🚀 Después de habilitar
 
 GitHub Pages debería mostrar:
+
 ```
 Your site is ready to be published at https://diegogzt.github.io/flowy-ui-kit/
 ```

@@ -56,19 +56,15 @@ flowy-ui-kit/
 ### Crear tu primer componente
 
 ```tsx
-import { Button, Card, Input } from 'flowy-ui-kit';
+import { Button, Card, Input } from "flowy-ui-kit";
 
 export function MyForm() {
   return (
     <Card className="w-full max-w-md">
       <h2 className="text-2xl font-bold mb-4">Mi Formulario</h2>
-      
-      <Input 
-        type="email"
-        placeholder="tu@email.com"
-        className="mb-4"
-      />
-      
+
+      <Input type="email" placeholder="tu@email.com" className="mb-4" />
+
       <Button variant="primary" className="w-full">
         Enviar
       </Button>
@@ -100,6 +96,7 @@ Botón versátil con múltiples variantes.
 ```
 
 **Props:**
+
 - `variant`: "primary" | "secondary" | "accent" | "outline" | "ghost"
 - `size`: "sm" | "md" | "lg"
 - `disabled`: boolean
@@ -112,14 +109,14 @@ Botón versátil con múltiples variantes.
 Campo de entrada de texto.
 
 ```tsx
-import { useState } from 'react';
-import { Input } from 'flowy-ui-kit';
+import { useState } from "react";
+import { Input } from "flowy-ui-kit";
 
 function App() {
-  const [value, setValue] = useState('');
+  const [value, setValue] = useState("");
 
   return (
-    <Input 
+    <Input
       type="text"
       placeholder="Escribe aquí..."
       value={value}
@@ -131,6 +128,7 @@ function App() {
 ```
 
 **Props:**
+
 - `type`: "text" | "email" | "password" | "number" | "date" | etc.
 - `placeholder`: string
 - `value`: string
@@ -145,25 +143,24 @@ function App() {
 Contenedor con estructura de tarjeta.
 
 ```tsx
-import { Card, CardHeader, CardTitle, CardFooter, Button } from 'flowy-ui-kit';
+import { Card, CardHeader, CardTitle, CardFooter, Button } from "flowy-ui-kit";
 
 <Card>
   <CardHeader>
     <CardTitle>Título de la tarjeta</CardTitle>
   </CardHeader>
-  
-  <div className="p-6">
-    Contenido principal de la tarjeta
-  </div>
-  
+
+  <div className="p-6">Contenido principal de la tarjeta</div>
+
   <CardFooter>
     <Button variant="secondary">Cancelar</Button>
     <Button>Aceptar</Button>
   </CardFooter>
-</Card>
+</Card>;
 ```
 
 **Componentes:**
+
 - `Card` - Contenedor principal
 - `CardHeader` - Encabezado (con fondo de color)
 - `CardTitle` - Título dentro del header
@@ -194,6 +191,7 @@ Notificaciones y alertas.
 ```
 
 **Props:**
+
 - `variant`: "success" | "error" | "warning" | "info"
 - `title`: string (opcional)
 - `children`: ReactNode (mensaje)
@@ -205,8 +203,8 @@ Notificaciones y alertas.
 Calendario interactivo para selección de fechas.
 
 ```tsx
-import { Calendar } from 'flowy-ui-kit';
-import { useState } from 'react';
+import { Calendar } from "flowy-ui-kit";
+import { useState } from "react";
 
 function Booking() {
   const [date, setDate] = useState<Date>(new Date());
@@ -225,6 +223,7 @@ function Booking() {
 ```
 
 **Props:**
+
 - `size`: "sm" | "md" | "lg"
 - `variant`: "primary" | "secondary" | "accent"
 - `selectedDate`: Date
@@ -240,14 +239,14 @@ function Booking() {
 #### Checkbox
 
 ```tsx
-import { Checkbox } from 'flowy-ui-kit';
-import { useState } from 'react';
+import { Checkbox } from "flowy-ui-kit";
+import { useState } from "react";
 
 function App() {
   const [checked, setChecked] = useState(false);
 
   return (
-    <Checkbox 
+    <Checkbox
       checked={checked}
       onChange={() => setChecked(!checked)}
       label="Aceptar términos"
@@ -269,27 +268,27 @@ import { Radio } from 'flowy-ui-kit';
 #### Select
 
 ```tsx
-import { Select } from 'flowy-ui-kit';
+import { Select } from "flowy-ui-kit";
 
 <Select>
   <option value="">Selecciona una opción</option>
   <option value="1">Opción 1</option>
   <option value="2">Opción 2</option>
   <option value="3">Opción 3</option>
-</Select>
+</Select>;
 ```
 
 #### Toggle
 
 ```tsx
-import { Toggle } from 'flowy-ui-kit';
-import { useState } from 'react';
+import { Toggle } from "flowy-ui-kit";
+import { useState } from "react";
 
 function App() {
   const [enabled, setEnabled] = useState(false);
 
   return (
-    <Toggle 
+    <Toggle
       checked={enabled}
       onChange={() => setEnabled(!enabled)}
       label="Activar notificaciones"
@@ -318,14 +317,14 @@ import { Badge } from 'flowy-ui-kit';
 ```tsx
 import { Avatar } from 'flowy-ui-kit';
 
-<Avatar 
+<Avatar
   src="https://ejemplo.com/avatar.jpg"
   alt="Diego"
   size="md"
 />
 
 // O con iniciales si no hay imagen
-<Avatar 
+<Avatar
   initials="DT"
   size="lg"
 />
@@ -334,26 +333,26 @@ import { Avatar } from 'flowy-ui-kit';
 #### Table
 
 ```tsx
-import { Table } from 'flowy-ui-kit';
+import { Table } from "flowy-ui-kit";
 
 const columns = [
-  { key: 'id', header: 'ID' },
-  { key: 'name', header: 'Nombre' },
-  { key: 'email', header: 'Email' },
+  { key: "id", header: "ID" },
+  { key: "name", header: "Nombre" },
+  { key: "email", header: "Email" },
 ];
 
 const data = [
-  { id: '1', name: 'Juan', email: 'juan@mail.com' },
-  { id: '2', name: 'María', email: 'maria@mail.com' },
+  { id: "1", name: "Juan", email: "juan@mail.com" },
+  { id: "2", name: "María", email: "maria@mail.com" },
 ];
 
-<Table columns={columns} data={data} />
+<Table columns={columns} data={data} />;
 ```
 
 #### Tabs
 
 ```tsx
-import { Tabs } from 'flowy-ui-kit';
+import { Tabs } from "flowy-ui-kit";
 
 <Tabs defaultValue="tab1">
   <div value="tab1" label="Pestaña 1">
@@ -362,7 +361,7 @@ import { Tabs } from 'flowy-ui-kit';
   <div value="tab2" label="Pestaña 2">
     Contenido 2
   </div>
-</Tabs>
+</Tabs>;
 ```
 
 #### List
@@ -395,12 +394,12 @@ module.exports = {
   theme: {
     extend: {
       colors: {
-        primary: '#E46F20',
-        secondary: '#FCB72B',
-        accent: '#CC5803',
-        dark: '#582B11',
-        light: '#F6E6C4',
-        beige: '#E7D7C9',
+        primary: "#E46F20",
+        secondary: "#FCB72B",
+        accent: "#CC5803",
+        dark: "#582B11",
+        light: "#F6E6C4",
+        beige: "#E7D7C9",
       },
     },
   },
@@ -410,10 +409,7 @@ module.exports = {
 ### Aplicar clases personalizadas
 
 ```tsx
-<Button 
-  variant="primary"
-  className="custom-class shadow-xl"
->
+<Button variant="primary" className="custom-class shadow-xl">
   Botón personalizado
 </Button>
 ```
@@ -426,10 +422,10 @@ module.exports = {
 
 ```tsx
 // ✅ Bien
-import { Button, Card } from 'flowy-ui-kit';
+import { Button, Card } from "flowy-ui-kit";
 
 // ❌ Evita
-import * as UI from 'flowy-ui-kit';
+import * as UI from "flowy-ui-kit";
 ```
 
 ### 2. Usa TypeScript

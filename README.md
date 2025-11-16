@@ -22,22 +22,26 @@ npm install flowy-ui-kit
 ### Usar componentes de forma local
 
 1. Clona el repositorio:
+
 ```bash
 git clone https://github.com/diegogzt/flowy-ui-kit.git
 cd flowy-ui-kit
 ```
 
 2. Instala dependencias:
+
 ```bash
 npm install
 ```
 
 3. Inicia el servidor de desarrollo:
+
 ```bash
 npm run dev
 ```
 
 4. Para compilar para producción:
+
 ```bash
 npm run build
 ```
@@ -45,15 +49,18 @@ npm run build
 ## 🎨 Componentes Disponibles
 
 ### Botones & Acciones
+
 - **Button** - Botón principal con variantes y tamaños
 - **Link** - Enlace estilizado con variantes
 
 ### Alertas & Retroalimentación
+
 - **Alert** - Componente de alerta con múltiples variantes
 - **Spinner** - Indicador de carga
 - **ProgressBar** - Barra de progreso personalizable
 
 ### Formularios
+
 - **Input** - Campo de entrada de texto
 - **Textarea** - Área de texto multilinea
 - **Select** - Selector desplegable
@@ -62,6 +69,7 @@ npm run build
 - **Toggle** - Interruptor on/off
 
 ### Visualización de Datos
+
 - **Badge** - Etiqueta pequeña
 - **Avatar** - Imagen de perfil con iniciales
 - **Card** - Contenedor con header, título y footer
@@ -71,6 +79,7 @@ npm run build
 - **Calendar** - Calendario interactivo con selección de fechas
 
 ### Autenticación
+
 - **Auth** - Componente de login con protección por contraseña
 
 ## 🚀 Uso en tu Proyecto
@@ -78,7 +87,7 @@ npm run build
 ### Importar componentes individuales
 
 ```tsx
-import { Button, Card, Input } from 'flowy-ui-kit';
+import { Button, Card, Input } from "flowy-ui-kit";
 
 function App() {
   return (
@@ -96,6 +105,7 @@ function App() {
 ### Ejemplos específicos
 
 #### Button
+
 ```tsx
 import { Button } from 'flowy-ui-kit';
 
@@ -109,19 +119,21 @@ import { Button } from 'flowy-ui-kit';
 ```
 
 #### Input
-```tsx
-import { Input } from 'flowy-ui-kit';
 
-<Input 
-  type="email" 
+```tsx
+import { Input } from "flowy-ui-kit";
+
+<Input
+  type="email"
   placeholder="tu@email.com"
   onChange={(e) => console.log(e.target.value)}
-/>
+/>;
 ```
 
 #### Card
+
 ```tsx
-import { Card, CardHeader, CardTitle, CardFooter } from 'flowy-ui-kit';
+import { Card, CardHeader, CardTitle, CardFooter } from "flowy-ui-kit";
 
 <Card>
   <CardHeader>
@@ -131,19 +143,20 @@ import { Card, CardHeader, CardTitle, CardFooter } from 'flowy-ui-kit';
   <CardFooter>
     <Button>Acción</Button>
   </CardFooter>
-</Card>
+</Card>;
 ```
 
 #### Calendar
+
 ```tsx
-import { Calendar } from 'flowy-ui-kit';
-import { useState } from 'react';
+import { Calendar } from "flowy-ui-kit";
+import { useState } from "react";
 
 function App() {
   const [selectedDate, setSelectedDate] = useState<Date>(new Date());
 
   return (
-    <Calendar 
+    <Calendar
       size="md"
       variant="primary"
       selectedDate={selectedDate}
@@ -155,6 +168,7 @@ function App() {
 ```
 
 #### Alert
+
 ```tsx
 import { Alert } from 'flowy-ui-kit';
 
@@ -169,14 +183,14 @@ import { Alert } from 'flowy-ui-kit';
 
 ## 🎭 Paleta de Colores
 
-| Color | Hex | Uso |
-|-------|-----|-----|
-| **Primary** (Zest) | #E46F20 | Botones, encabezados, elementos principales |
-| **Secondary** (My Sin) | #FCB72B | Botones secundarios, highlights |
-| **Accent** (Red Stage) | #CC5803 | Énfasis, acentos especiales |
-| **Dark** (Jambalaya) | #582B11 | Texto principal, fondos oscuros |
-| **Light** (Sidecar) | #F6E6C4 | Fondos claros, secciones |
-| **Beige** (Bone) | #E7D7C9 | Bordes, separadores |
+| Color                  | Hex     | Uso                                         |
+| ---------------------- | ------- | ------------------------------------------- |
+| **Primary** (Zest)     | #E46F20 | Botones, encabezados, elementos principales |
+| **Secondary** (My Sin) | #FCB72B | Botones secundarios, highlights             |
+| **Accent** (Red Stage) | #CC5803 | Énfasis, acentos especiales                 |
+| **Dark** (Jambalaya)   | #582B11 | Texto principal, fondos oscuros             |
+| **Light** (Sidecar)    | #F6E6C4 | Fondos claros, secciones                    |
+| **Beige** (Bone)       | #E7D7C9 | Bordes, separadores                         |
 
 ## 🔧 Scripts disponibles
 
@@ -214,6 +228,7 @@ Las contribuciones son bienvenidas. Por favor abre un issue o pull request para 
 ---
 
 **¿Necesitas ayuda?** Abre un issue en [GitHub](https://github.com/diegogzt/flowy-ui-kit/issues)
+
 - **Select** - Dropdown selector
 - **Checkbox** - Checkbox reutilizable
 - **Radio** - Radio button reutilizable

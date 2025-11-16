@@ -23,8 +23,8 @@ La estructura básica de un componente:
 
 ```tsx
 // src/components/MyComponent.tsx
-import React from 'react';
-import { cn } from '../utils/cn';
+import React from "react";
+import { cn } from "../utils/cn";
 
 interface MyComponentProps {
   className?: string;
@@ -38,7 +38,7 @@ export const MyComponent: React.FC<MyComponentProps> = ({
   ...props
 }) => {
   return (
-    <div className={cn('base-classes', className)} {...props}>
+    <div className={cn("base-classes", className)} {...props}>
       {children}
     </div>
   );
@@ -52,7 +52,7 @@ export default MyComponent;
 Agrega a `src/components/index.ts`:
 
 ```typescript
-export { default as MyComponent } from './MyComponent';
+export { default as MyComponent } from "./MyComponent";
 ```
 
 ### 4. Agregar a la demostración
@@ -60,13 +60,13 @@ export { default as MyComponent } from './MyComponent';
 Actualiza `src/App.tsx` para incluir tu componente:
 
 ```tsx
-import { MyComponent } from './components';
+import { MyComponent } from "./components";
 
 // En el JSX:
 <section>
   <h2>Mi Componente</h2>
   <MyComponent />
-</section>
+</section>;
 ```
 
 ### 5. Probar y compilar
@@ -98,8 +98,8 @@ npx tsc --noEmit
  * @param disabled - Deshabilita el botón
  */
 interface ButtonProps {
-  variant?: 'primary' | 'secondary' | 'accent';
-  size?: 'sm' | 'md' | 'lg';
+  variant?: "primary" | "secondary" | "accent";
+  size?: "sm" | "md" | "lg";
   disabled?: boolean;
 }
 ```
@@ -133,10 +133,7 @@ className="px-4 py-2 #E46F20"
 - ✅ Mantén buen contraste de colores
 
 ```tsx
-<button 
-  aria-label="Cerrar diálogo"
-  className="..."
->
+<button aria-label="Cerrar diálogo" className="...">
   ✕
 </button>
 ```
@@ -177,18 +174,22 @@ Ejemplo de PR description:
 
 ```markdown
 ## 📝 Descripción
+
 Agrega nuevo componente Badge con múltiples variantes.
 
 ## 🎯 Cambios
+
 - Nuevo componente `Badge` en `src/components/Badge.tsx`
 - Exportado en `src/components/index.ts`
 - Demostración agregada en `src/App.tsx`
 - Documentación en `GUIDE.md`
 
 ## 📸 Captura
+
 [Incluye screenshot o GIF si es relevante]
 
 ## ✅ Checklist
+
 - [x] Código revisado
 - [x] TypeScript sin errores
 - [x] Build exitoso
@@ -217,23 +218,29 @@ Usa la plantilla de issue:
 
 ```markdown
 ## 🐛 Descripción del bug
+
 Describe brevemente el problema
 
 ## 🔄 Pasos para reproducir
+
 1. Abre...
 2. Haz clic en...
 3. Observa...
 
 ## ✅ Comportamiento esperado
+
 Qué debería pasar
 
 ## ❌ Comportamiento actual
+
 Qué está pasando
 
 ## 📸 Captura/Video
+
 [Incluye si es posible]
 
 ## 💻 Ambiente
+
 - Sistema operativo: [Windows, macOS, Linux]
 - Navegador: [Chrome, Firefox, Safari]
 - Versión de Node: [18, 20, etc]
@@ -243,12 +250,15 @@ Qué está pasando
 
 ```markdown
 ## ✨ Solicitud de feature
+
 Describe la nueva funcionalidad
 
 ## 💡 Propuesta
+
 Cómo crees que debería implementarse
 
 ## 🎯 Caso de uso
+
 Cuándo/dónde se usaría esta feature
 ```
 

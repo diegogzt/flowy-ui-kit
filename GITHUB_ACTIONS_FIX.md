@@ -12,7 +12,9 @@ fatal: unable to access '...': The requested URL returned error: 403
 ## La solución
 
 ### ✅ Paso 1: Actualizar workflow (YA HECHO)
+
 He actualizado `.github/workflows/deploy.yml` con los permisos correctos:
+
 - `contents: write` - Para leer y escribir en el repositorio
 - `pages: write` - Para desplegar en GitHub Pages
 - `id-token: write` - Para tokens OIDC
@@ -20,6 +22,7 @@ He actualizado `.github/workflows/deploy.yml` con los permisos correctos:
 ### ✅ Paso 2: Habilitar permisos en GitHub (IMPORTANTE - HAZLO AHORA)
 
 Ve a tu repositorio GitHub:
+
 1. **Settings** → **Actions** → **General**
 2. Baja hasta **Workflow permissions**
 3. Selecciona: **"Read and write permissions"**
@@ -31,6 +34,7 @@ Ve a tu repositorio GitHub:
 El push que acabo de hacer debería ejecutar el workflow nuevamente con los permisos correctos.
 
 **Para forzar una nueva ejecución:**
+
 1. Ve a **Actions** en tu repositorio
 2. Selecciona el workflow **"Deploy to GitHub Pages"**
 3. Click en **"Run workflow"** → **"Run workflow"**
@@ -40,21 +44,25 @@ El push que acabo de hacer debería ejecutar el workflow nuevamente con los perm
 ## Instrucciones en imágenes
 
 ### 1. Ve a Settings
+
 ```
 GitHub → Tu repositorio → Settings
 ```
 
 ### 2. Busca "Workflow permissions"
+
 ```
 Settings → Actions → General → Scroll down → Workflow permissions
 ```
 
 ### 3. Selecciona "Read and write permissions"
+
 ```
 ☑ Read and write permissions  ← MARCA ESTO
 ```
 
 ### 4. Guarda
+
 ```
 Click "Save"
 ```
@@ -112,6 +120,7 @@ El `GITHUB_TOKEN` es automático y debería funcionar ahora con los permisos que
 ## ¿Preguntas?
 
 Si aún tienes problemas:
+
 1. Verifica que seguiste los pasos correctamente
 2. Espera 2-3 minutos después de cambiar los permisos
 3. Abre un issue en: https://github.com/diegogzt/flowy-ui-kit/issues

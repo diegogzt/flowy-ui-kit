@@ -18,6 +18,38 @@ module.exports = {
         info: "#e5f3ff", // Pippin/Solitude
         // Grises
         gray: "#767676", // Boulder
+
+        // Paleta Pastel Cálida
+        "warm-primary": "#FFB5A7",
+        "warm-secondary": "#FCD5CE",
+        "warm-accent": "#F8EDEB",
+        "warm-dark": "#E8B4B8",
+        "warm-light": "#FFF5F3",
+        "warm-beige": "#FFEEF0",
+
+        // Paleta Pastel Fría
+        "cool-primary": "#A7C7E7",
+        "cool-secondary": "#B8E0D2",
+        "cool-accent": "#D6EADF",
+        "cool-dark": "#89B5D6",
+        "cool-light": "#E8F4F8",
+        "cool-beige": "#D4E7ED",
+
+        // Paleta de Contraste
+        "contrast-primary": "#FF6B6B",
+        "contrast-secondary": "#4ECDC4",
+        "contrast-accent": "#FFE66D",
+        "contrast-dark": "#F38181",
+        "contrast-light": "#FFF9E5",
+        "contrast-beige": "#FFE5E5",
+
+        // Paleta Monocromática
+        "mono-primary": "#2C3E50",
+        "mono-secondary": "#34495E",
+        "mono-accent": "#7F8C8D",
+        "mono-dark": "#1A252F",
+        "mono-light": "#ECF0F1",
+        "mono-beige": "#BDC3C7",
       },
       fontFamily: {
         sans: ["Inter", "system-ui", "-apple-system", "sans-serif"],

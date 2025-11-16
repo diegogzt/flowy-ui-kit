@@ -3,22 +3,26 @@
 ## ✅ Cambios realizados para resolver el 404
 
 ### 1. Problema identificado
+
 - El `index.html` tenía ruta de favicon incorrecta: `href="/vite.svg"`
 - No había carpeta `public/` con los assets estáticos
 
 ### 2. Soluciones aplicadas
 
 #### ✅ Cambio 1: Favicon con ruta relativa
+
 - **Archivo**: `index.html`
 - **Cambio**: `href="/vite.svg"` → `href="./vite.svg"`
 - **Razón**: Vite necesita ruta relativa para procesar correctamente
 
 #### ✅ Cambio 2: Crear carpeta public/
+
 - **Archivo**: `public/vite.svg`
 - **Razón**: Vite copia automáticamente los archivos en `public/` al directorio `dist/`
 - **Resultado**: El archivo ahora aparece en `dist/vite.svg`
 
 #### ✅ Cambio 3: vite.config.ts
+
 - Mantenemos `base: "/flowy-ui-kit/"` para GitHub Pages
 - Scripts y CSS tienen rutas correctas: `/flowy-ui-kit/assets/...`
 - Favicon tiene ruta relativa: `./vite.svg`
@@ -28,6 +32,7 @@
 Una vez que el workflow termine (esperado en ~2 minutos):
 
 ### 1. Verificar GitHub Pages está habilitado
+
 ```bash
 # En GitHub, ve a Settings → Pages
 # Debe mostrar:
@@ -37,6 +42,7 @@ Una vez que el workflow termine (esperado en ~2 minutos):
 ```
 
 ### 2. Verificar que los archivos están en gh-pages
+
 ```bash
 git show origin/gh-pages:index.html | head -20
 git show origin/gh-pages:vite.svg | head -1
@@ -44,6 +50,7 @@ git show origin/gh-pages:assets/index-*.js | wc -c
 ```
 
 ### 3. Acceder al sitio
+
 - URL: `https://diegogzt.github.io/flowy-ui-kit/`
 - Debería mostrar la página SIN error 404
 - Se debería ver el popup de autenticación
@@ -51,6 +58,7 @@ git show origin/gh-pages:assets/index-*.js | wc -c
 ### 4. Si sigue mostrando 404
 
 #### Opción A: Limpiar caché
+
 ```bash
 # Fuerza refresh en navegador
 # macOS: Cmd+Shift+R
@@ -58,9 +66,11 @@ git show origin/gh-pages:assets/index-*.js | wc -c
 ```
 
 #### Opción B: Esperar más tiempo
+
 GitHub Pages puede tardar 5-10 minutos en actualizar
 
 #### Opción C: Verificar logs del workflow
+
 - Ve a GitHub → Actions
 - Abre el último workflow "Deploy to GitHub Pages"
 - Verifica que haya:
@@ -86,12 +96,15 @@ dist/
 Si después de todos estos pasos sigue sin funcionar, el problema podría ser:
 
 1. **GitHub Pages no está en la rama gh-pages**
+
    - Solución: Verificar en Settings → Pages
 
 2. **El workflow no está ejecutando**
+
    - Solución: Verificar en Actions que esté verde
 
 3. **Cache de GitHub Pages**
+
    - Solución: Esperar 10+ minutos
 
 4. **Problema de permisos**
@@ -100,6 +113,7 @@ Si después de todos estos pasos sigue sin funcionar, el problema podría ser:
 ## 🚀 Próximas acciones
 
 El siguiente workflow debería:
+
 1. Clonar el repositorio
 2. Instalar dependencias
 3. Correr TypeScript checker

@@ -5,15 +5,18 @@
 ### 🎨 20+ Componentes React
 
 **Botones & Acciones:**
+
 - Button (variantes: primary, secondary, accent, outline, ghost)
 - Link
 
 **Alertas & Retroalimentación:**
+
 - Alert (variantes: success, error, warning, info)
 - Spinner
 - ProgressBar
 
 **Formularios:**
+
 - Input
 - Textarea
 - Select
@@ -22,6 +25,7 @@
 - Toggle
 
 **Visualización de Datos:**
+
 - Badge
 - Avatar
 - Card (con CardHeader, CardTitle, CardFooter)
@@ -31,6 +35,7 @@
 - Calendar (con 3 tamaños y 3 variantes de color)
 
 **Seguridad:**
+
 - Auth (componente de autenticación con popup)
 
 ---
@@ -40,6 +45,7 @@
 **URL:** https://github.com/diegogzt/flowy-ui-kit
 
 **Contenido:**
+
 - ✅ 20+ componentes React listos para usar
 - ✅ 100% TypeScript con type safety
 - ✅ Tailwind CSS con paleta de colores personalizada
@@ -56,6 +62,7 @@
 **Estado:** ✅ Configurado y listo para desplegar
 
 **Características:**
+
 - ✅ Despliegue automático en cada push a `main`
 - ✅ Popup de autenticación (contraseña: flowy2025)
 - ✅ Base URL correctamente configurada: `/flowy-ui-kit/`
@@ -65,15 +72,15 @@
 
 ## 📚 Documentación Completa
 
-| Archivo | Descripción |
-|---------|-------------|
-| **README.md** | Introducción, características y ejemplos básicos |
-| **GUIDE.md** | Guía completa de todos los componentes con ejemplos |
-| **SETUP.md** | Configuración de GitHub Pages y troubleshooting |
-| **DEPLOYMENT.md** | Guía de despliegue y monitoreo |
-| **CONTRIBUTING.md** | Pautas para contribuir al proyecto |
-| **CALENDAR_COMPONENT.md** | Documentación detallada del Calendar |
-| **.env.example** | Plantilla de variables de entorno |
+| Archivo                   | Descripción                                         |
+| ------------------------- | --------------------------------------------------- |
+| **README.md**             | Introducción, características y ejemplos básicos    |
+| **GUIDE.md**              | Guía completa de todos los componentes con ejemplos |
+| **SETUP.md**              | Configuración de GitHub Pages y troubleshooting     |
+| **DEPLOYMENT.md**         | Guía de despliegue y monitoreo                      |
+| **CONTRIBUTING.md**       | Pautas para contribuir al proyecto                  |
+| **CALENDAR_COMPONENT.md** | Documentación detallada del Calendar                |
+| **.env.example**          | Plantilla de variables de entorno                   |
 
 ---
 
@@ -82,6 +89,7 @@
 ### Sistema implementado
 
 Un componente `Auth` hermoso con:
+
 - 🎨 Diseño moderno con gradientes
 - 🔒 Protección por contraseña
 - ⌨️ Validación en tiempo real
@@ -95,6 +103,7 @@ Contraseña: flowy2025
 ```
 
 Se define en `.env`:
+
 ```env
 VITE_AUTH_PASSWORD=flowy2025
 ```
@@ -103,14 +112,14 @@ VITE_AUTH_PASSWORD=flowy2025
 
 ## 🎨 Paleta de Colores
 
-| Color | Hex | Nombre |
-|-------|-----|--------|
-| Primary | #E46F20 | Zest |
-| Secondary | #FCB72B | My Sin |
-| Accent | #CC5803 | Red Stage |
-| Dark | #582B11 | Jambalaya |
-| Light | #F6E6C4 | Sidecar |
-| Beige | #E7D7C9 | Bone |
+| Color     | Hex     | Nombre    |
+| --------- | ------- | --------- |
+| Primary   | #E46F20 | Zest      |
+| Secondary | #FCB72B | My Sin    |
+| Accent    | #CC5803 | Red Stage |
+| Dark      | #582B11 | Jambalaya |
+| Light     | #F6E6C4 | Sidecar   |
+| Beige     | #E7D7C9 | Bone      |
 
 ---
 
@@ -144,6 +153,7 @@ CI/CD                 → GitHub Actions
 ### Opción 1: Importar componentes (recomendado)
 
 1. Clona el repositorio:
+
 ```bash
 git clone https://github.com/diegogzt/flowy-ui-kit.git
 ```
@@ -151,6 +161,7 @@ git clone https://github.com/diegogzt/flowy-ui-kit.git
 2. Copia la carpeta `src/components` a tu proyecto
 
 3. Importa lo que necesites:
+
 ```tsx
 import { Button, Card, Calendar } from './components';
 
@@ -196,9 +207,11 @@ Contraseña: `flowy2025`
 ## 🎯 Próximos pasos recomendados
 
 1. **Compartir el enlace:**
+
    - https://diegogzt.github.io/flowy-ui-kit/
 
 2. **Agregar más componentes:**
+
    - Toast/Notifications
    - Modal/Dialog
    - Dropdown Menu
@@ -206,11 +219,13 @@ Contraseña: `flowy2025`
    - Navbar
 
 3. **Mejorar documentación:**
+
    - Agregar screenshots de componentes
    - Crear videos de demostración
    - Agregar ejemplos interactivos
 
 4. **Publicar en npm:**
+
    - Crear cuenta en npm.js
    - Publicar `flowy-ui-kit`
    - Usar como dependencia en otros proyectos
@@ -256,6 +271,7 @@ copies or substantial portions of the Software.
 ## 🎉 ¡Proyecto completado con éxito!
 
 Tu **Flowy UI Kit** está:
+
 - ✅ Completo y funcional
 - ✅ Documentado profesionalmente
 - ✅ Deployado en GitHub Pages

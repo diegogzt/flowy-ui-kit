@@ -18,6 +18,7 @@ El proyecto se despliega **automáticamente** en cada push a `main`:
 ### Cómo funciona
 
 1. **Push a GitHub**
+
    ```bash
    git add .
    git commit -m "tu mensaje"
@@ -25,6 +26,7 @@ El proyecto se despliega **automáticamente** en cada push a `main`:
    ```
 
 2. **GitHub Actions se ejecuta automáticamente**
+
    - Instala dependencias
    - Compila el proyecto
    - Genera la carpeta `dist/`
@@ -56,11 +58,13 @@ El proyecto se despliega **automáticamente** en cada push a `main`:
 ### Cambiar la contraseña
 
 1. Edita el archivo `.env`:
+
    ```env
    VITE_AUTH_PASSWORD=tu_nueva_contraseña
    ```
 
 2. Haz commit y push:
+
    ```bash
    git add .env
    git commit -m "chore: Update auth password"
@@ -96,6 +100,7 @@ https://diegogzt.github.io/flowy-ui-kit/
 ### Si necesitas cambios
 
 En **Settings → Pages**:
+
 - Source: Selecciona "Deploy from a branch"
 - Branch: Selecciona "gh-pages"
 - Folder: "(root)"
@@ -126,6 +131,7 @@ Antes de considerar el proyecto "deployado":
 **Problema**: "There isn't a GitHub Pages site here"
 
 **Solución**:
+
 1. Verifica que GitHub Pages esté habilitado en Settings
 2. Asegúrate que la rama `gh-pages` existe
 3. En `vite.config.ts` debe tener: `base: "/flowy-ui-kit/"`
@@ -136,6 +142,7 @@ Antes de considerar el proyecto "deployado":
 **Problema**: Cambios no se reflejan en el sitio
 
 **Solución**:
+
 1. Limpia caché del navegador (Cmd+Shift+R)
 2. Espera 2-3 minutos para que GitHub Pages actualice
 3. Verifica que el workflow en **Actions** está verde
@@ -146,6 +153,7 @@ Antes de considerar el proyecto "deployado":
 **Problema**: No puedo ingresar con la contraseña
 
 **Solución**:
+
 1. Limpia storage del navegador (F12 → Application → Storage → Delete All)
 2. Recarga la página
 3. Intenta la contraseña exactamente: `flowy2025`
@@ -156,6 +164,7 @@ Antes de considerar el proyecto "deployado":
 **Problema**: Página sin estilos (solo texto)
 
 **Solución**:
+
 1. Verifica en DevTools que no hay errores 404
 2. Limpia caché: Cmd+Shift+R
 3. Comprueba que `tailwind.config.js` está correctamente
@@ -186,6 +195,7 @@ Antes de considerar el proyecto "deployado":
 ### Para proyectos en producción real
 
 Considera:
+
 - Usar un servicio de autenticación real (Auth0, Supabase, etc.)
 - No versionear `.env` en Git
 - Usar `gh-pages-auth` u otro middleware
@@ -206,6 +216,7 @@ Para este proyecto de demostración, está bien así, pero ten en cuenta las imp
 ## 🎉 ¡Felicidades!
 
 Tu Flowy UI Kit está deployado en GitHub Pages con:
+
 - ✅ 20+ componentes React profesionales
 - ✅ Documentación completa
 - ✅ Autenticación por contraseña
@@ -213,6 +224,7 @@ Tu Flowy UI Kit está deployado en GitHub Pages con:
 - ✅ URL pública accesible desde cualquier lugar
 
 **Próximos pasos:**
+
 1. Compartir el enlace: https://diegogzt.github.io/flowy-ui-kit/
 2. Agregar más componentes según sea necesario
 3. Publicar en npm cuando esté listo
