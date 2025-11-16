@@ -119,9 +119,199 @@ function App() {
         </p>
       </div>
 
+      {/* Índice de Paletas */}
+      <nav className="px-8 py-12 border-b-2 border-beige bg-gradient-to-br from-beige to-light">
+        <div className="max-w-7xl mx-auto">
+          <h2 className="text-4xl font-bold text-primary mb-8 text-center">🎨 Índice de Paletas de Colores</h2>
+          <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-4">
+            {/* Original Flowy */}
+            <a href="#flowy" className="block p-4 rounded-lg border-2 border-gray-200 hover:border-primary hover:shadow-md transition-all bg-white">
+              <div className="flex items-center gap-3 mb-3">
+                <span className="text-2xl">🌊</span>
+                <h3 className="font-bold text-lg text-dark">Flowy Original</h3>
+              </div>
+              <div className="flex gap-2">
+                <div className="w-10 h-10 rounded-full bg-primary border-2 border-white shadow-sm" title="#e46f20"></div>
+                <div className="w-10 h-10 rounded-full bg-secondary border-2 border-white shadow-sm" title="#fcb72b"></div>
+                <div className="w-10 h-10 rounded-full bg-accent border-2 border-white shadow-sm" title="#cc5803"></div>
+                <div className="w-10 h-10 rounded-full bg-dark border-2 border-white shadow-sm" title="#2c1810"></div>
+              </div>
+            </a>
+
+            {/* Warm Pastel */}
+            <a href="#warm" className="block p-4 rounded-lg border-2 border-gray-200 hover:border-warm-primary hover:shadow-md transition-all bg-white">
+              <div className="flex items-center gap-3 mb-3">
+                <span className="text-2xl">🌸</span>
+                <h3 className="font-bold text-lg text-dark">Warm Pastel</h3>
+              </div>
+              <div className="flex gap-2">
+                <div className="w-10 h-10 rounded-full bg-warm-primary border-2 border-white shadow-sm" title="#FFB5A7"></div>
+                <div className="w-10 h-10 rounded-full bg-warm-secondary border-2 border-white shadow-sm" title="#FCD5CE"></div>
+                <div className="w-10 h-10 rounded-full bg-warm-accent border-2 border-white shadow-sm" title="#F8EDEB"></div>
+                <div className="w-10 h-10 rounded-full bg-warm-dark border-2 border-white shadow-sm" title="#8B4513"></div>
+              </div>
+            </a>
+
+            {/* Cool Pastel */}
+            <a href="#cool" className="block p-4 rounded-lg border-2 border-gray-200 hover:border-cool-primary hover:shadow-md transition-all bg-white">
+              <div className="flex items-center gap-3 mb-3">
+                <span className="text-2xl">❄️</span>
+                <h3 className="font-bold text-lg text-dark">Cool Pastel</h3>
+              </div>
+              <div className="flex gap-2">
+                <div className="w-10 h-10 rounded-full bg-cool-primary border-2 border-white shadow-sm" title="#A7C7E7"></div>
+                <div className="w-10 h-10 rounded-full bg-cool-secondary border-2 border-white shadow-sm" title="#B8E0D2"></div>
+                <div className="w-10 h-10 rounded-full bg-cool-accent border-2 border-white shadow-sm" title="#D6EADF"></div>
+                <div className="w-10 h-10 rounded-full bg-cool-dark border-2 border-white shadow-sm" title="#2C3E50"></div>
+              </div>
+            </a>
+
+            {/* Contrast */}
+            <a href="#contrast" className="block p-4 rounded-lg border-2 border-gray-200 hover:border-contrast-primary hover:shadow-md transition-all bg-white">
+              <div className="flex items-center gap-3 mb-3">
+                <span className="text-2xl">🎯</span>
+                <h3 className="font-bold text-lg text-dark">Contrast</h3>
+              </div>
+              <div className="flex gap-2">
+                <div className="w-10 h-10 rounded-full bg-contrast-primary border-2 border-white shadow-sm" title="#FF6B6B"></div>
+                <div className="w-10 h-10 rounded-full bg-contrast-secondary border-2 border-white shadow-sm" title="#4ECDC4"></div>
+                <div className="w-10 h-10 rounded-full bg-contrast-accent border-2 border-white shadow-sm" title="#FFE66D"></div>
+                <div className="w-10 h-10 rounded-full bg-contrast-dark border-2 border-white shadow-sm" title="#1A535C"></div>
+              </div>
+            </a>
+
+            {/* Monochrome */}
+            <a href="#monochrome" className="block p-4 rounded-lg border-2 border-gray-200 hover:border-monochrome-primary hover:shadow-md transition-all bg-white">
+              <div className="flex items-center gap-3 mb-3">
+                <span className="text-2xl">⚫</span>
+                <h3 className="font-bold text-lg text-dark">Monochrome</h3>
+              </div>
+              <div className="flex gap-2">
+                <div className="w-10 h-10 rounded-full bg-monochrome-primary border-2 border-white shadow-sm" title="#2C3E50"></div>
+                <div className="w-10 h-10 rounded-full bg-monochrome-secondary border-2 border-white shadow-sm" title="#34495E"></div>
+                <div className="w-10 h-10 rounded-full bg-monochrome-accent border-2 border-white shadow-sm" title="#7F8C8D"></div>
+                <div className="w-10 h-10 rounded-full bg-monochrome-dark border-2 border-white shadow-sm" title="#1C2833"></div>
+              </div>
+            </a>
+
+            {/* Sunset */}
+            <a href="#sunset" className="block p-4 rounded-lg border-2 border-gray-200 hover:border-sunset-primary hover:shadow-md transition-all bg-white">
+              <div className="flex items-center gap-3 mb-3">
+                <span className="text-2xl">🌅</span>
+                <h3 className="font-bold text-lg text-dark">Sunset</h3>
+              </div>
+              <div className="flex gap-2">
+                <div className="w-10 h-10 rounded-full bg-sunset-primary border-2 border-white shadow-sm" title="#FF6B9D"></div>
+                <div className="w-10 h-10 rounded-full bg-sunset-secondary border-2 border-white shadow-sm" title="#FFA07A"></div>
+                <div className="w-10 h-10 rounded-full bg-sunset-accent border-2 border-white shadow-sm" title="#FFD700"></div>
+                <div className="w-10 h-10 rounded-full bg-sunset-dark border-2 border-white shadow-sm" title="#8B4789"></div>
+              </div>
+            </a>
+
+            {/* Nature */}
+            <a href="#nature" className="block p-4 rounded-lg border-2 border-gray-200 hover:border-nature-primary hover:shadow-md transition-all bg-white">
+              <div className="flex items-center gap-3 mb-3">
+                <span className="text-2xl">🌿</span>
+                <h3 className="font-bold text-lg text-dark">Nature</h3>
+              </div>
+              <div className="flex gap-2">
+                <div className="w-10 h-10 rounded-full bg-nature-primary border-2 border-white shadow-sm" title="#2D6A4F"></div>
+                <div className="w-10 h-10 rounded-full bg-nature-secondary border-2 border-white shadow-sm" title="#52B788"></div>
+                <div className="w-10 h-10 rounded-full bg-nature-accent border-2 border-white shadow-sm" title="#95D5B2"></div>
+                <div className="w-10 h-10 rounded-full bg-nature-dark border-2 border-white shadow-sm" title="#1B4332"></div>
+              </div>
+            </a>
+
+            {/* Ocean */}
+            <a href="#ocean" className="block p-4 rounded-lg border-2 border-gray-200 hover:border-ocean-primary hover:shadow-md transition-all bg-white">
+              <div className="flex items-center gap-3 mb-3">
+                <span className="text-2xl">🌊</span>
+                <h3 className="font-bold text-lg text-dark">Ocean</h3>
+              </div>
+              <div className="flex gap-2">
+                <div className="w-10 h-10 rounded-full bg-ocean-primary border-2 border-white shadow-sm" title="#006D77"></div>
+                <div className="w-10 h-10 rounded-full bg-ocean-secondary border-2 border-white shadow-sm" title="#83C5BE"></div>
+                <div className="w-10 h-10 rounded-full bg-ocean-accent border-2 border-white shadow-sm" title="#EDF6F9"></div>
+                <div className="w-10 h-10 rounded-full bg-ocean-dark border-2 border-white shadow-sm" title="#023047"></div>
+              </div>
+            </a>
+
+            {/* Lavender */}
+            <a href="#lavender" className="block p-4 rounded-lg border-2 border-gray-200 hover:border-lavender-primary hover:shadow-md transition-all bg-white">
+              <div className="flex items-center gap-3 mb-3">
+                <span className="text-2xl">💜</span>
+                <h3 className="font-bold text-lg text-dark">Lavender</h3>
+              </div>
+              <div className="flex gap-2">
+                <div className="w-10 h-10 rounded-full bg-lavender-primary border-2 border-white shadow-sm" title="#9D84B7"></div>
+                <div className="w-10 h-10 rounded-full bg-lavender-secondary border-2 border-white shadow-sm" title="#C8B6E2"></div>
+                <div className="w-10 h-10 rounded-full bg-lavender-accent border-2 border-white shadow-sm" title="#E8DFF5"></div>
+                <div className="w-10 h-10 rounded-full bg-lavender-dark border-2 border-white shadow-sm" title="#5D4E6D"></div>
+              </div>
+            </a>
+
+            {/* Tropical */}
+            <a href="#tropical" className="block p-4 rounded-lg border-2 border-gray-200 hover:border-tropical-primary hover:shadow-md transition-all bg-white">
+              <div className="flex items-center gap-3 mb-3">
+                <span className="text-2xl">🌴</span>
+                <h3 className="font-bold text-lg text-dark">Tropical</h3>
+              </div>
+              <div className="flex gap-2">
+                <div className="w-10 h-10 rounded-full bg-tropical-primary border-2 border-white shadow-sm" title="#1F6357"></div>
+                <div className="w-10 h-10 rounded-full bg-tropical-secondary border-2 border-white shadow-sm" title="#4DB8A8"></div>
+                <div className="w-10 h-10 rounded-full bg-tropical-yellow border-2 border-white shadow-sm" title="#F4C430"></div>
+                <div className="w-10 h-10 rounded-full bg-tropical-orange border-2 border-white shadow-sm" title="#F39C12"></div>
+              </div>
+            </a>
+
+            {/* Neon */}
+            <a href="#neon" className="block p-4 rounded-lg border-2 border-neon-primary hover:border-neon-secondary hover:shadow-lg hover:shadow-neon-primary/30 transition-all bg-black">
+              <div className="flex items-center gap-3 mb-3">
+                <span className="text-2xl">⚡</span>
+                <h3 className="font-bold text-lg text-neon-primary">Neon</h3>
+              </div>
+              <div className="flex gap-2">
+                <div className="w-10 h-10 rounded-full bg-neon-primary border-2 border-black shadow-lg shadow-neon-primary/50" title="#FF00FF"></div>
+                <div className="w-10 h-10 rounded-full bg-neon-secondary border-2 border-black shadow-lg shadow-neon-secondary/50" title="#00FFFF"></div>
+                <div className="w-10 h-10 rounded-full bg-neon-accent border-2 border-black shadow-lg shadow-neon-accent/50" title="#FFFF00"></div>
+                <div className="w-10 h-10 rounded-full bg-white border-2 border-black shadow-sm" title="#FFFFFF"></div>
+              </div>
+            </a>
+
+            {/* Fire */}
+            <a href="#fire" className="block p-4 rounded-lg border-2 border-gray-200 hover:border-fire-primary hover:shadow-md transition-all bg-white">
+              <div className="flex items-center gap-3 mb-3">
+                <span className="text-2xl">🔥</span>
+                <h3 className="font-bold text-lg text-dark">Fire</h3>
+              </div>
+              <div className="flex gap-2">
+                <div className="w-10 h-10 rounded-full bg-fire-primary border-2 border-white shadow-sm" title="#FF4500"></div>
+                <div className="w-10 h-10 rounded-full bg-fire-secondary border-2 border-white shadow-sm" title="#FFD700"></div>
+                <div className="w-10 h-10 rounded-full bg-fire-accent border-2 border-white shadow-sm" title="#FF6347"></div>
+                <div className="w-10 h-10 rounded-full bg-fire-dark border-2 border-white shadow-sm" title="#8B0000"></div>
+              </div>
+            </a>
+
+            {/* Electric */}
+            <a href="#electric" className="block p-4 rounded-lg border-2 border-gray-200 hover:border-electric-primary hover:shadow-md transition-all bg-white">
+              <div className="flex items-center gap-3 mb-3">
+                <span className="text-2xl">⚡</span>
+                <h3 className="font-bold text-lg text-dark">Electric</h3>
+              </div>
+              <div className="flex gap-2">
+                <div className="w-10 h-10 rounded-full bg-electric-primary border-2 border-white shadow-sm" title="#00D9FF"></div>
+                <div className="w-10 h-10 rounded-full bg-electric-secondary border-2 border-white shadow-sm" title="#FF0080"></div>
+                <div className="w-10 h-10 rounded-full bg-electric-accent border-2 border-white shadow-sm" title="#FFFF00"></div>
+                <div className="w-10 h-10 rounded-full bg-electric-dark border-2 border-white shadow-sm" title="#0A0E27"></div>
+              </div>
+            </a>
+          </div>
+        </div>
+      </nav>
+
       <div className="px-8 py-12">
         {/* Typography Section */}
-        <section className="mb-16 pb-12 border-b-2 border-beige">
+        <section id="flowy" className="mb-16 pb-12 border-b-2 border-beige scroll-mt-8">
           <div className="bg-light rounded-lg px-4 py-2 mb-6 inline-block">
             <h2 className="text-2xl font-bold text-dark">Tipografía</h2>
           </div>
@@ -808,7 +998,7 @@ function App() {
         </section>
 
         {/* PALETA DE CONTRASTE */}
-        <section className="mb-16 pb-12 border-b-2 border-contrast-beige">
+        <section id="contrast" className="mb-16 pb-12 border-b-2 border-contrast-beige scroll-mt-8">
           <div className="bg-contrast-light rounded-lg px-4 py-2 mb-6 inline-block">
             <h2 className="text-4xl font-bold text-contrast-dark">⚡ Paleta de Contraste</h2>
           </div>
@@ -1010,7 +1200,7 @@ function App() {
         </section>
 
         {/* PALETA SUNSET (ATARDECER) */}
-        <section className="mb-16 pb-12 border-b-2 border-sunset-beige">
+        <section id="sunset" className="mb-16 pb-12 border-b-2 border-sunset-beige scroll-mt-8">
           <div className="bg-sunset-light rounded-lg px-4 py-2 mb-6 inline-block">
             <h2 className="text-4xl font-bold text-sunset-dark">🌅 Paleta Sunset</h2>
           </div>
@@ -1111,7 +1301,7 @@ function App() {
         </section>
 
         {/* PALETA NATURE (NATURALEZA) */}
-        <section className="mb-16 pb-12 border-b-2 border-nature-beige">
+        <section id="nature" className="mb-16 pb-12 border-b-2 border-nature-beige scroll-mt-8">
           <div className="bg-nature-light rounded-lg px-4 py-2 mb-6 inline-block">
             <h2 className="text-4xl font-bold text-nature-dark">🌿 Paleta Nature</h2>
           </div>
@@ -1212,7 +1402,7 @@ function App() {
         </section>
 
         {/* PALETA OCEAN (OCÉANO) */}
-        <section className="mb-16 pb-12 border-b-2 border-ocean-beige">
+        <section id="ocean" className="mb-16 pb-12 border-b-2 border-ocean-beige scroll-mt-8">
           <div className="bg-ocean-light rounded-lg px-4 py-2 mb-6 inline-block">
             <h2 className="text-4xl font-bold text-ocean-dark">🌊 Paleta Ocean</h2>
           </div>
@@ -1414,7 +1604,7 @@ function App() {
         </section>
 
         {/* PALETA TROPICAL (ALTO CONTRASTE) */}
-        <section className="mb-16 pb-12 border-b-2 border-tropical-beige">
+        <section id="tropical" className="mb-16 pb-12 border-b-2 border-tropical-beige scroll-mt-8">
           <div className="bg-tropical-light rounded-lg px-4 py-2 mb-6 inline-block">
             <h2 className="text-4xl font-bold text-tropical-dark">🌴 Paleta Tropical</h2>
           </div>
@@ -1518,7 +1708,7 @@ function App() {
         </section>
 
         {/* PALETA NEON (ALTO CONTRASTE) */}
-        <section className="mb-16 pb-12 border-b-2 border-neon-beige bg-neon-dark">
+        <section id="neon" className="mb-16 pb-12 border-b-2 border-neon-beige bg-neon-dark scroll-mt-8">
           <div className="bg-black rounded-lg px-4 py-2 mb-6 inline-block border-2 border-neon-primary">
             <h2 className="text-4xl font-bold text-neon-primary">⚡ Paleta Neon</h2>
           </div>
@@ -1619,7 +1809,7 @@ function App() {
         </section>
 
         {/* PALETA FIRE (FUEGO - ALTO CONTRASTE) */}
-        <section className="mb-16 pb-12 border-b-2 border-fire-beige">
+        <section id="fire" className="mb-16 pb-12 border-b-2 border-fire-beige scroll-mt-8">
           <div className="bg-fire-light rounded-lg px-4 py-2 mb-6 inline-block">
             <h2 className="text-4xl font-bold text-fire-dark">🔥 Paleta Fire</h2>
           </div>
@@ -1723,7 +1913,7 @@ function App() {
         </section>
 
         {/* PALETA ELECTRIC (ELÉCTRICA - ALTO CONTRASTE) */}
-        <section className="pb-12">
+        <section id="electric" className="pb-12 scroll-mt-8">
           <div className="bg-electric-light rounded-lg px-4 py-2 mb-6 inline-block border-2 border-electric-primary">
             <h2 className="text-4xl font-bold text-electric-dark">⚡ Paleta Electric</h2>
           </div>
