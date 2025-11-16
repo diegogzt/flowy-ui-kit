@@ -50,6 +50,38 @@ module.exports = {
         "mono-dark": "#1A252F",
         "mono-light": "#ECF0F1",
         "mono-beige": "#BDC3C7",
+
+        // Paleta Sunset (Atardecer)
+        "sunset-primary": "#FF6B9D",
+        "sunset-secondary": "#FFA07A",
+        "sunset-accent": "#FFD700",
+        "sunset-dark": "#C73866",
+        "sunset-light": "#FFF4E6",
+        "sunset-beige": "#FFE4E1",
+
+        // Paleta Nature (Naturaleza)
+        "nature-primary": "#2D6A4F",
+        "nature-secondary": "#52B788",
+        "nature-accent": "#95D5B2",
+        "nature-dark": "#1B4332",
+        "nature-light": "#D8F3DC",
+        "nature-beige": "#B7E4C7",
+
+        // Paleta Ocean (Océano)
+        "ocean-primary": "#006D77",
+        "ocean-secondary": "#83C5BE",
+        "ocean-accent": "#EDF6F9",
+        "ocean-dark": "#003D47",
+        "ocean-light": "#FFDDD2",
+        "ocean-beige": "#E29578",
+
+        // Paleta Lavender (Lavanda)
+        "lavender-primary": "#9D84B7",
+        "lavender-secondary": "#C8B6E2",
+        "lavender-accent": "#E8DFF5",
+        "lavender-dark": "#6B5B8E",
+        "lavender-light": "#F7F3FC",
+        "lavender-beige": "#E5D9F2",
       },
       fontFamily: {
         sans: ["Inter", "system-ui", "-apple-system", "sans-serif"],
