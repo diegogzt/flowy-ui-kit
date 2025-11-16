@@ -11,8 +11,12 @@ permissions:
   id-token: write
 
 jobs:
-  build:
+  build-and-deploy:
     runs-on: ubuntu-latest
+    permissions:
+      contents: write
+      pages: write
+      id-token: write
     
     steps:
       - name: Checkout repository
@@ -37,5 +41,5 @@ jobs:
           publish_dir: ./dist
           user_name: 'github-actions[bot]'
           user_email: 'github-actions[bot]@users.noreply.github.com'
-          commit_message: 'Build: Deploy to GitHub Pages'
+          commit_message: 'chore: Deploy to GitHub Pages'
           force_orphan: true
