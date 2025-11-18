@@ -1,0 +1,801 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>UI Kit - Mint Fresh</title>
+    <style>
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+        body {
+            font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Oxygen, Ubuntu, Cantarell, sans-serif;
+            background-color: #f5f5f5;
+            padding: 40px 20px;
+        }
+        .container {
+            max-width: 1400px;
+            margin: 0 auto;
+        }
+        h1 {
+            text-align: center;
+            color: #1F756E;
+            margin-bottom: 40px;
+            font-size: 48px;
+        }
+        .section {
+            background: white;
+            padding: 40px;
+            margin-bottom: 30px;
+            border-radius: 16px;
+            box-shadow: 0 2px 8px rgba(0,0,0,0.1);
+        }
+        .section h2 {
+            color: #1F756E;
+            margin-bottom: 24px;
+            font-size: 28px;
+        }
+        .section h3 {
+            color: #0F4540;
+            margin: 24px 0 16px 0;
+            font-size: 20px;
+        }
+        .component-grid {
+            display: grid;
+            gap: 20px;
+            grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+        }
+        .color-palette {
+            display: flex;
+            gap: 16px;
+            flex-wrap: wrap;
+            margin-bottom: 20px;
+        }
+        .color-box {
+            flex: 1;
+            min-width: 120px;
+            height: 100px;
+            border-radius: 12px;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            color: white;
+            font-weight: 600;
+            font-size: 14px;
+            box-shadow: 0 2px 4px rgba(0,0,0,0.1);
+        }
+    </style>
+</head>
+<body>
+    <div class="container">
+        <h1>🌿 Mint Fresh UI Kit</h1>
+        
+        <!-- Colores -->
+        <div class="section">
+            <h2>🎨 Colores</h2>
+            <div class="color-palette">
+                <div class="color-box" style="background-color: #1F756E;">#1F756E</div>
+                <div class="color-box" style="background-color: #5DDCC3;">#5DDCC3</div>
+                <div class="color-box" style="background-color: #C8E86C; color: #0F4540;">#C8E86C</div>
+                <div class="color-box" style="background-color: #0F4540;">#0F4540</div>
+                <div class="color-box" style="background-color: #E8F9F5; color: #0F4540;">#E8F9F5</div>
+                <div class="color-box" style="background-color: #D4E8E3; color: #0F4540;">#D4E8E3</div>
+            </div>
+        </div>
+
+        <!-- Botones -->
+        <div class="section">
+            <h2>🔘 Botones</h2>
+            <div class="component-grid">
+                <button style="padding: 12px 24px; background-color: #1F756E; color: #ffffff; border: none; border-radius: 8px; font-weight: 600; font-size: 16px; cursor: pointer;">Verde Azulado</button>
+                
+                <button style="padding: 12px 24px; background-color: #5DDCC3; color: #ffffff; border: none; border-radius: 8px; font-weight: 600; font-size: 16px; cursor: pointer;">Aqua</button>
+                
+                <button style="padding: 12px 24px; background-color: #C8E86C; color: #0F4540; border: none; border-radius: 8px; font-weight: 600; font-size: 16px; cursor: pointer;">Lima</button>
+                
+                <button style="padding: 12px 24px; background-color: transparent; color: #1F756E; border: 2px solid #1F756E; border-radius: 8px; font-weight: 600; font-size: 16px; cursor: pointer;">Outline</button>
+                
+                <button style="padding: 12px 24px; background-color: #0F4540; color: #ffffff; border: none; border-radius: 8px; font-weight: 600; font-size: 16px; cursor: pointer;">Oscuro</button>
+                
+                <button style="padding: 8px 16px; background-color: #E8F9F5; color: #1F756E; border: none; border-radius: 6px; font-weight: 600; font-size: 14px; cursor: pointer;">Small</button>
+            </div>
+        </div>
+
+        <!-- Tarjetas -->
+        <div class="section">
+            <h2>🃏 Tarjetas</h2>
+            <div class="component-grid">
+                <div style="background-color: #ffffff; border: 2px solid #D4E8E3; border-radius: 12px; padding: 24px; box-shadow: 0 1px 3px rgba(0,0,0,0.1);">
+                    <div style="margin-bottom: 12px;">
+                        <span style="display: inline-block; padding: 4px 12px; background-color: #1F756E; color: #ffffff; font-size: 14px; font-weight: 600; border-radius: 20px;">Fresh</span>
+                    </div>
+                    <h3 style="font-size: 20px; font-weight: 700; color: #0F4540; margin-bottom: 8px;">Tarjeta Mint</h3>
+                    <p style="font-size: 14px; color: #666666; line-height: 1.6; margin-bottom: 16px;">Diseño fresco con colores verdes, aqua y lima.</p>
+                    <button style="padding: 8px 16px; background-color: #1F756E; color: #ffffff; border: none; border-radius: 6px; font-weight: 600; font-size: 14px; cursor: pointer;">Ver más</button>
+                </div>
+
+                <div style="background-color: #E8F9F5; border: 2px solid #5DDCC3; border-radius: 12px; padding: 24px; box-shadow: 0 1px 3px rgba(0,0,0,0.1);">
+                    <div style="margin-bottom: 12px;">
+                        <span style="display: inline-block; padding: 4px 12px; background-color: #5DDCC3; color: #ffffff; font-size: 14px; font-weight: 600; border-radius: 20px;">Destacado</span>
+                    </div>
+                    <h3 style="font-size: 20px; font-weight: 700; color: #1F756E; margin-bottom: 8px;">Tarjeta Destacada</h3>
+                    <p style="font-size: 14px; color: #0F4540; line-height: 1.6; margin-bottom: 16px;">Variante con fondo mint para contenido especial.</p>
+                    <button style="padding: 8px 16px; background-color: #1F756E; color: #ffffff; border: none; border-radius: 6px; font-weight: 600; font-size: 14px; cursor: pointer;">Acción</button>
+                </div>
+
+                <div style="background-color: #ffffff; border: 2px solid #D4E8E3; border-radius: 12px; overflow: hidden; box-shadow: 0 2px 4px rgba(0,0,0,0.1);">
+                    <div style="background: linear-gradient(135deg, #1F756E 0%, #5DDCC3 100%); height: 120px;"></div>
+                    <div style="padding: 20px;">
+                        <h3 style="font-size: 18px; font-weight: 700; color: #0F4540; margin-bottom: 8px;">Card con Imagen</h3>
+                        <p style="font-size: 14px; color: #666666; line-height: 1.6;">Diseño de tarjeta con header visual.</p>
+                    </div>
+                </div>
+            </div>
+        </div>
+
+        <!-- Alertas -->
+        <div class="section">
+            <h2>⚠️ Alertas</h2>
+            
+            <div style="background-color: #E8F9F5; border-left: 4px solid #1F756E; padding: 16px; border-radius: 8px; margin-bottom: 16px;">
+                <div style="display: flex; align-items: center; gap: 8px;">
+                    <span style="font-size: 20px;">ℹ️</span>
+                    <span style="font-weight: 600; color: #0F4540;">Información</span>
+                </div>
+                <p style="margin-top: 8px; color: #0F4540; font-size: 14px;">Mensaje informativo con estilo mint fresh.</p>
+            </div>
+
+            <div style="background-color: #F0FDF4; border-left: 4px solid #C8E86C; padding: 16px; border-radius: 8px; margin-bottom: 16px;">
+                <div style="display: flex; align-items: center; gap: 8px;">
+                    <span style="font-size: 20px;">⚠️</span>
+                    <span style="font-weight: 600; color: #0F4540;">Advertencia</span>
+                </div>
+                <p style="margin-top: 8px; color: #0F4540; font-size: 14px;">Mensaje de advertencia en tonos lima.</p>
+            </div>
+
+            <div style="background-color: #D4E8E3; border-left: 4px solid #5DDCC3; padding: 16px; border-radius: 8px; margin-bottom: 16px;">
+                <div style="display: flex; align-items: center; gap: 8px;">
+                    <span style="font-size: 20px;">✅</span>
+                    <span style="font-weight: 600; color: #1F756E;">Éxito</span>
+                </div>
+                <p style="margin-top: 8px; color: #0F4540; font-size: 14px;">Operación completada exitosamente.</p>
+            </div>
+
+            <div style="background-color: #FEE2E2; border-left: 4px solid #DC2626; padding: 16px; border-radius: 8px;">
+                <div style="display: flex; align-items: center; gap: 8px;">
+                    <span style="font-size: 20px;">❌</span>
+                    <span style="font-weight: 600; color: #991B1B;">Error</span>
+                </div>
+                <p style="margin-top: 8px; color: #991B1B; font-size: 14px;">Ha ocurrido un error en la operación.</p>
+            </div>
+        </div>
+
+        <!-- Formularios -->
+        <div class="section">
+            <h2>📝 Formularios</h2>
+            
+            <div style="max-width: 600px;">
+                <div style="margin-bottom: 20px;">
+                    <label style="display: block; margin-bottom: 8px; font-weight: 600; color: #0F4540;">Nombre</label>
+                    <input type="text" placeholder="Ingresa tu nombre" style="width: 100%; padding: 12px 16px; border: 2px solid #D4E8E3; border-radius: 8px; font-size: 16px; outline: none;">
+                </div>
+
+                <div style="margin-bottom: 20px;">
+                    <label style="display: block; margin-bottom: 8px; font-weight: 600; color: #0F4540;">Email</label>
+                    <input type="email" placeholder="correo@ejemplo.com" style="width: 100%; padding: 12px 16px; border: 2px solid #D4E8E3; border-radius: 8px; font-size: 16px; outline: none;">
+                </div>
+
+                <div style="margin-bottom: 20px;">
+                    <label style="display: block; margin-bottom: 8px; font-weight: 600; color: #0F4540;">Categoría</label>
+                    <select style="width: 100%; padding: 12px 16px; border: 2px solid #D4E8E3; border-radius: 8px; font-size: 16px; outline: none; background-color: white;">
+                        <option>Selecciona una opción</option>
+                        <option>Consulta</option>
+                        <option>Reserva</option>
+                        <option>Soporte</option>
+                    </select>
+                </div>
+
+                <div style="margin-bottom: 20px;">
+                    <label style="display: block; margin-bottom: 8px; font-weight: 600; color: #0F4540;">Mensaje</label>
+                    <textarea placeholder="Escribe tu mensaje..." style="width: 100%; padding: 12px 16px; border: 2px solid #D4E8E3; border-radius: 8px; font-size: 16px; outline: none; min-height: 100px; resize: vertical;"></textarea>
+                </div>
+
+                <div style="margin-bottom: 20px; display: flex; align-items: center; gap: 8px;">
+                    <input type="checkbox" id="terms-mint" style="width: 18px; height: 18px; cursor: pointer;">
+                    <label for="terms-mint" style="font-size: 14px; color: #0F4540; cursor: pointer;">Acepto los términos y condiciones</label>
+                </div>
+
+                <button style="width: 100%; padding: 12px 24px; background-color: #1F756E; color: #ffffff; border: none; border-radius: 8px; font-weight: 600; font-size: 16px; cursor: pointer;">Enviar</button>
+            </div>
+        </div>
+
+        <!-- Badges y Pills -->
+        <div class="section">
+            <h2>🏷️ Badges & Pills</h2>
+            
+            <div style="display: flex; gap: 12px; flex-wrap: wrap; margin-bottom: 20px;">
+                <span style="display: inline-block; padding: 4px 12px; background-color: #1F756E; color: #ffffff; font-size: 13px; font-weight: 600; border-radius: 4px;">Badge</span>
+                <span style="display: inline-block; padding: 4px 12px; background-color: #5DDCC3; color: #ffffff; font-size: 13px; font-weight: 600; border-radius: 4px;">Active</span>
+                <span style="display: inline-block; padding: 4px 12px; background-color: #C8E86C; color: #0F4540; font-size: 13px; font-weight: 600; border-radius: 4px;">Pending</span>
+                <span style="display: inline-block; padding: 4px 12px; background-color: #E8F9F5; color: #1F756E; font-size: 13px; font-weight: 600; border-radius: 4px;">Info</span>
+            </div>
+
+            <h3>Pills</h3>
+            <div style="display: flex; gap: 12px; flex-wrap: wrap;">
+                <span style="display: inline-block; padding: 6px 16px; background-color: #1F756E; color: #ffffff; font-size: 13px; font-weight: 600; border-radius: 20px;">Mint</span>
+                <span style="display: inline-block; padding: 6px 16px; background-color: #5DDCC3; color: #ffffff; font-size: 13px; font-weight: 600; border-radius: 20px;">Aqua</span>
+                <span style="display: inline-block; padding: 6px 16px; background-color: #C8E86C; color: #0F4540; font-size: 13px; font-weight: 600; border-radius: 20px;">Lime</span>
+                <span style="display: inline-block; padding: 6px 16px; background-color: transparent; color: #1F756E; border: 2px solid #1F756E; font-size: 13px; font-weight: 600; border-radius: 20px;">Outline</span>
+            </div>
+        </div>
+
+        <!-- Progress Bars -->
+        <div class="section">
+            <h2>📊 Progress Bars</h2>
+            
+            <div style="margin-bottom: 24px;">
+                <div style="display: flex; justify-content: space-between; margin-bottom: 8px;">
+                    <span style="font-size: 14px; font-weight: 600; color: #0F4540;">Progreso</span>
+                    <span style="font-size: 14px; font-weight: 600; color: #1F756E;">75%</span>
+                </div>
+                <div style="width: 100%; height: 8px; background-color: #E8F9F5; border-radius: 10px; overflow: hidden;">
+                    <div style="width: 75%; height: 100%; background-color: #1F756E; border-radius: 10px;"></div>
+                </div>
+            </div>
+
+            <div style="margin-bottom: 24px;">
+                <div style="display: flex; justify-content: space-between; margin-bottom: 8px;">
+                    <span style="font-size: 14px; font-weight: 600; color: #0F4540;">Cargando</span>
+                    <span style="font-size: 14px; font-weight: 600; color: #5DDCC3;">45%</span>
+                </div>
+                <div style="width: 100%; height: 12px; background-color: #E8F9F5; border-radius: 10px; overflow: hidden;">
+                    <div style="width: 45%; height: 100%; background-color: #5DDCC3; border-radius: 10px;"></div>
+                </div>
+            </div>
+
+            <div>
+                <div style="display: flex; justify-content: space-between; margin-bottom: 8px;">
+                    <span style="font-size: 14px; font-weight: 600; color: #0F4540;">Completado</span>
+                    <span style="font-size: 14px; font-weight: 600; color: #1F756E;">100%</span>
+                </div>
+                <div style="width: 100%; height: 8px; background-color: #E8F9F5; border-radius: 10px; overflow: hidden;">
+                    <div style="width: 100%; height: 100%; background: linear-gradient(90deg, #1F756E 0%, #5DDCC3 100%); border-radius: 10px;"></div>
+                </div>
+            </div>
+        </div>
+
+        <!-- Lista de Tareas -->
+        <div class="section">
+            <h2>✅ Lista de Tareas</h2>
+            
+            <div style="max-width: 600px;">
+                <div style="display: flex; align-items: center; padding: 16px; border: 2px solid #D4E8E3; border-radius: 8px; margin-bottom: 12px;">
+                    <input type="checkbox" checked style="width: 20px; height: 20px; margin-right: 12px; cursor: pointer;">
+                    <span style="font-size: 15px; color: #0F4540; flex: 1;">Completar diseño del landing page</span>
+                    <span style="font-size: 12px; color: #1F756E; font-weight: 600;">✓ Completado</span>
+                </div>
+
+                <div style="display: flex; align-items: center; padding: 16px; border: 2px solid #D4E8E3; border-radius: 8px; margin-bottom: 12px; background-color: #E8F9F5;">
+                    <input type="checkbox" style="width: 20px; height: 20px; margin-right: 12px; cursor: pointer;">
+                    <span style="font-size: 15px; color: #0F4540; flex: 1;">Revisar componentes de calendario</span>
+                    <span style="font-size: 12px; color: #999999;">Pendiente</span>
+                </div>
+
+                <div style="display: flex; align-items: center; padding: 16px; border: 2px solid #D4E8E3; border-radius: 8px; margin-bottom: 12px;">
+                    <input type="checkbox" style="width: 20px; height: 20px; margin-right: 12px; cursor: pointer;">
+                    <span style="font-size: 15px; color: #0F4540; flex: 1;">Implementar sistema de reservas</span>
+                    <span style="font-size: 12px; color: #C8E86C; font-weight: 600;">En progreso</span>
+                </div>
+            </div>
+        </div>
+
+        <!-- Calendarios con Reservas -->
+        <div class="section">
+            <h2>📅 Calendario Mensual con Reservas</h2>
+            
+            <div style="background-color: #ffffff; border: 2px solid #D4E8E3; border-radius: 12px; padding: 24px; max-width: 800px; margin: 0 auto;">
+                <div style="display: flex; justify-content: space-between; align-items: center; margin-bottom: 20px;">
+                    <button style="background: none; border: none; font-size: 24px; cursor: pointer; color: #1F756E; padding: 8px;">←</button>
+                    <div style="text-align: center;">
+                        <h3 style="font-weight: 700; font-size: 20px; color: #0F4540; margin-bottom: 4px;">Noviembre 2025</h3>
+                        <p style="font-size: 13px; color: #666666;">15 reservas este mes</p>
+                    </div>
+                    <button style="background: none; border: none; font-size: 24px; cursor: pointer; color: #1F756E; padding: 8px;">→</button>
+                </div>
+                
+                <!-- Leyenda -->
+                <div style="display: flex; gap: 16px; justify-content: center; margin-bottom: 16px; flex-wrap: wrap;">
+                    <div style="display: flex; align-items: center; gap: 6px;">
+                        <div style="width: 12px; height: 12px; background-color: #1F756E; border-radius: 50%;"></div>
+                        <span style="font-size: 13px; color: #0F4540;">Reservado</span>
+                    </div>
+                    <div style="display: flex; align-items: center; gap: 6px;">
+                        <div style="width: 12px; height: 12px; background-color: #5DDCC3; border-radius: 50%;"></div>
+                        <span style="font-size: 13px; color: #0F4540;">Parcial</span>
+                    </div>
+                    <div style="display: flex; align-items: center; gap: 6px;">
+                        <div style="width: 12px; height: 12px; background-color: #C8E86C; border-radius: 50%;"></div>
+                        <span style="font-size: 13px; color: #0F4540;">Pendiente</span>
+                    </div>
+                </div>
+                
+                <div style="display: grid; grid-template-columns: repeat(7, 1fr); gap: 8px; text-align: center;">
+                    <div style="font-weight: 700; font-size: 13px; color: #1F756E; padding: 8px;">L</div>
+                    <div style="font-weight: 700; font-size: 13px; color: #1F756E; padding: 8px;">M</div>
+                    <div style="font-weight: 700; font-size: 13px; color: #1F756E; padding: 8px;">X</div>
+                    <div style="font-weight: 700; font-size: 13px; color: #1F756E; padding: 8px;">J</div>
+                    <div style="font-weight: 700; font-size: 13px; color: #1F756E; padding: 8px;">V</div>
+                    <div style="font-weight: 700; font-size: 13px; color: #1F756E; padding: 8px;">S</div>
+                    <div style="font-weight: 700; font-size: 13px; color: #1F756E; padding: 8px;">D</div>
+                    
+                    <div style="padding: 12px 8px; font-size: 14px; color: #CCCCCC;">27</div>
+                    <div style="padding: 12px 8px; font-size: 14px; color: #CCCCCC;">28</div>
+                    <div style="padding: 12px 8px; font-size: 14px; color: #CCCCCC;">29</div>
+                    <div style="padding: 12px 8px; font-size: 14px; color: #CCCCCC;">30</div>
+                    <div style="padding: 12px 8px; font-size: 14px; color: #CCCCCC;">31</div>
+                    <div style="padding: 12px 8px; font-size: 14px; color: #0F4540; cursor: pointer; border-radius: 8px;">1</div>
+                    <div style="padding: 12px 8px; font-size: 14px; color: #0F4540; cursor: pointer; border-radius: 8px;">2</div>
+                    
+                    <div style="padding: 12px 8px; font-size: 14px; color: #0F4540; cursor: pointer; border-radius: 8px;">3</div>
+                    <div style="padding: 12px 8px; font-size: 14px; color: #0F4540; background-color: #5DDCC3; font-weight: 600; cursor: pointer; border-radius: 8px;">4</div>
+                    <div style="padding: 12px 8px; font-size: 14px; color: #0F4540; cursor: pointer; border-radius: 8px;">5</div>
+                    <div style="padding: 12px 8px; font-size: 14px; color: #ffffff; background-color: #1F756E; font-weight: 600; cursor: pointer; border-radius: 8px;">6</div>
+                    <div style="padding: 12px 8px; font-size: 14px; color: #0F4540; background-color: #C8E86C; font-weight: 600; cursor: pointer; border-radius: 8px;">7</div>
+                    <div style="padding: 12px 8px; font-size: 14px; color: #0F4540; cursor: pointer; border-radius: 8px;">8</div>
+                    <div style="padding: 12px 8px; font-size: 14px; color: #0F4540; cursor: pointer; border-radius: 8px;">9</div>
+                    
+                    <div style="padding: 12px 8px; font-size: 14px; color: #0F4540; cursor: pointer; border-radius: 8px;">10</div>
+                    <div style="padding: 12px 8px; font-size: 14px; color: #0F4540; cursor: pointer; border-radius: 8px;">11</div>
+                    <div style="padding: 12px 8px; font-size: 14px; color: #ffffff; background-color: #1F756E; font-weight: 600; cursor: pointer; border-radius: 8px;">12</div>
+                    <div style="padding: 12px 8px; font-size: 14px; color: #ffffff; background-color: #1F756E; font-weight: 600; cursor: pointer; border-radius: 8px;">13</div>
+                    <div style="padding: 12px 8px; font-size: 14px; color: #ffffff; background-color: #1F756E; font-weight: 600; cursor: pointer; border-radius: 8px;">14</div>
+                    <div style="padding: 12px 8px; font-size: 14px; color: #0F4540; cursor: pointer; border-radius: 8px;">15</div>
+                    <div style="padding: 12px 8px; font-size: 14px; color: #0F4540; cursor: pointer; border-radius: 8px;">16</div>
+                    
+                    <div style="padding: 12px 8px; font-size: 14px; color: #0F4540; cursor: pointer; border-radius: 8px;">17</div>
+                    <div style="padding: 12px 8px; font-size: 14px; color: #ffffff; background-color: #1F756E; border: 3px solid #0F4540; font-weight: 700; cursor: pointer; border-radius: 8px;">18</div>
+                    <div style="padding: 12px 8px; font-size: 14px; color: #0F4540; background-color: #5DDCC3; font-weight: 600; cursor: pointer; border-radius: 8px;">19</div>
+                    <div style="padding: 12px 8px; font-size: 14px; color: #ffffff; background-color: #1F756E; font-weight: 600; cursor: pointer; border-radius: 8px;">20</div>
+                    <div style="padding: 12px 8px; font-size: 14px; color: #0F4540; background-color: #C8E86C; font-weight: 600; cursor: pointer; border-radius: 8px;">21</div>
+                    <div style="padding: 12px 8px; font-size: 14px; color: #0F4540; cursor: pointer; border-radius: 8px;">22</div>
+                    <div style="padding: 12px 8px; font-size: 14px; color: #0F4540; cursor: pointer; border-radius: 8px;">23</div>
+                    
+                    <div style="padding: 12px 8px; font-size: 14px; color: #0F4540; cursor: pointer; border-radius: 8px;">24</div>
+                    <div style="padding: 12px 8px; font-size: 14px; color: #0F4540; background-color: #5DDCC3; font-weight: 600; cursor: pointer; border-radius: 8px;">25</div>
+                    <div style="padding: 12px 8px; font-size: 14px; color: #ffffff; background-color: #1F756E; font-weight: 600; cursor: pointer; border-radius: 8px;">26</div>
+                    <div style="padding: 12px 8px; font-size: 14px; color: #ffffff; background-color: #1F756E; font-weight: 600; cursor: pointer; border-radius: 8px;">27</div>
+                    <div style="padding: 12px 8px; font-size: 14px; color: #0F4540; background-color: #C8E86C; font-weight: 600; cursor: pointer; border-radius: 8px;">28</div>
+                    <div style="padding: 12px 8px; font-size: 14px; color: #0F4540; cursor: pointer; border-radius: 8px;">29</div>
+                    <div style="padding: 12px 8px; font-size: 14px; color: #0F4540; cursor: pointer; border-radius: 8px;">30</div>
+                </div>
+
+                <!-- Resumen de reservas -->
+                <div style="margin-top: 24px; padding-top: 20px; border-top: 2px solid #D4E8E3;">
+                    <div style="display: grid; grid-template-columns: repeat(3, 1fr); gap: 16px;">
+                        <div style="text-align: center; padding: 12px; background-color: #E8F9F5; border-radius: 8px;">
+                            <div style="font-size: 24px; font-weight: 700; color: #1F756E;">8</div>
+                            <div style="font-size: 13px; color: #0F4540;">Confirmadas</div>
+                        </div>
+                        <div style="text-align: center; padding: 12px; background-color: #F0FDF4; border-radius: 8px;">
+                            <div style="font-size: 24px; font-weight: 700; color: #65A30D;">3</div>
+                            <div style="font-size: 13px; color: #65A30D;">Pendientes</div>
+                        </div>
+                        <div style="text-align: center; padding: 12px; background-color: #D4E8E3; border-radius: 8px;">
+                            <div style="font-size: 24px; font-weight: 700; color: #1F756E;">4</div>
+                            <div style="font-size: 13px; color: #0F4540;">Parciales</div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+
+        <!-- Calendario Semanal -->
+        <div class="section">
+            <h2>📅 Calendario Semanal</h2>
+            
+            <div style="background-color: #ffffff; border: 2px solid #D4E8E3; border-radius: 12px; padding: 24px; max-width: 1200px; margin: 0 auto;">
+                <div style="display: flex; justify-content: space-between; align-items: center; margin-bottom: 20px;">
+                    <button style="background: none; border: none; font-size: 24px; cursor: pointer; color: #1F756E; padding: 8px;">←</button>
+                    <div style="text-align: center;">
+                        <h3 style="font-weight: 700; font-size: 18px; color: #0F4540;">18 - 24 Noviembre 2025</h3>
+                    </div>
+                    <button style="background: none; border: none; font-size: 24px; cursor: pointer; color: #1F756E; padding: 8px;">→</button>
+                </div>
+                
+                <div style="display: grid; grid-template-columns: 100px repeat(7, 1fr); gap: 1px; background-color: #D4E8E3;">
+                    <!-- Headers -->
+                    <div style="background-color: #E8F9F5; padding: 12px; text-align: center; font-weight: 700; color: #0F4540; font-size: 12px;">Hora</div>
+                    <div style="background-color: #E8F9F5; padding: 12px; text-align: center;">
+                        <div style="font-size: 11px; color: #666666;">LUN</div>
+                        <div style="font-size: 16px; font-weight: 700; color: #0F4540;">18</div>
+                    </div>
+                    <div style="background-color: #E8F9F5; padding: 12px; text-align: center;">
+                        <div style="font-size: 11px; color: #666666;">MAR</div>
+                        <div style="font-size: 16px; font-weight: 700; color: #0F4540;">19</div>
+                    </div>
+                    <div style="background-color: #D4E8E3; padding: 12px; text-align: center; border: 2px solid #1F756E;">
+                        <div style="font-size: 11px; color: #1F756E; font-weight: 600;">MIE</div>
+                        <div style="font-size: 16px; font-weight: 700; color: #1F756E;">20</div>
+                    </div>
+                    <div style="background-color: #E8F9F5; padding: 12px; text-align: center;">
+                        <div style="font-size: 11px; color: #666666;">JUE</div>
+                        <div style="font-size: 16px; font-weight: 700; color: #0F4540;">21</div>
+                    </div>
+                    <div style="background-color: #E8F9F5; padding: 12px; text-align: center;">
+                        <div style="font-size: 11px; color: #666666;">VIE</div>
+                        <div style="font-size: 16px; font-weight: 700; color: #0F4540;">22</div>
+                    </div>
+                    <div style="background-color: #E8F9F5; padding: 12px; text-align: center;">
+                        <div style="font-size: 11px; color: #666666;">SAB</div>
+                        <div style="font-size: 16px; font-weight: 700; color: #0F4540;">23</div>
+                    </div>
+                    <div style="background-color: #E8F9F5; padding: 12px; text-align: center;">
+                        <div style="font-size: 11px; color: #666666;">DOM</div>
+                        <div style="font-size: 16px; font-weight: 700; color: #0F4540;">24</div>
+                    </div>
+                    
+                    <!-- 9:00 AM -->
+                    <div style="background-color: #ffffff; padding: 12px; text-align: center; font-size: 13px; color: #666666;">9:00</div>
+                    <div style="background-color: #ffffff; padding: 8px;"></div>
+                    <div style="background-color: #1F756E; padding: 8px; border-radius: 4px;">
+                        <div style="font-size: 11px; color: #ffffff; font-weight: 600;">Reunión</div>
+                        <div style="font-size: 10px; color: #E8F9F5;">9:00 - 10:00</div>
+                    </div>
+                    <div style="background-color: #ffffff; padding: 8px;"></div>
+                    <div style="background-color: #ffffff; padding: 8px;"></div>
+                    <div style="background-color: #5DDCC3; padding: 8px; border-radius: 4px;">
+                        <div style="font-size: 11px; color: #ffffff; font-weight: 600;">Consulta</div>
+                        <div style="font-size: 10px; color: #ffffff;">9:00 - 9:30</div>
+                    </div>
+                    <div style="background-color: #ffffff; padding: 8px;"></div>
+                    <div style="background-color: #ffffff; padding: 8px;"></div>
+                    
+                    <!-- 10:00 AM -->
+                    <div style="background-color: #ffffff; padding: 12px; text-align: center; font-size: 13px; color: #666666;">10:00</div>
+                    <div style="background-color: #C8E86C; padding: 8px; border-radius: 4px;">
+                        <div style="font-size: 11px; color: #0F4540; font-weight: 600;">Pendiente</div>
+                        <div style="font-size: 10px; color: #0F4540;">10:00 - 11:00</div>
+                    </div>
+                    <div style="background-color: #ffffff; padding: 8px;"></div>
+                    <div style="background-color: #ffffff; padding: 8px;"></div>
+                    <div style="background-color: #1F756E; padding: 8px; border-radius: 4px;">
+                        <div style="font-size: 11px; color: #ffffff; font-weight: 600;">Evento</div>
+                        <div style="font-size: 10px; color: #E8F9F5;">10:00 - 12:00</div>
+                    </div>
+                    <div style="background-color: #ffffff; padding: 8px;"></div>
+                    <div style="background-color: #1F756E; padding: 8px; border-radius: 4px;">
+                        <div style="font-size: 11px; color: #ffffff; font-weight: 600;">Reserva</div>
+                        <div style="font-size: 10px; color: #E8F9F5;">10:00 - 11:30</div>
+                    </div>
+                    <div style="background-color: #ffffff; padding: 8px;"></div>
+                    
+                    <!-- 12:00 PM -->
+                    <div style="background-color: #ffffff; padding: 12px; text-align: center; font-size: 13px; color: #666666;">12:00</div>
+                    <div style="background-color: #ffffff; padding: 8px;"></div>
+                    <div style="background-color: #ffffff; padding: 8px;"></div>
+                    <div style="background-color: #5DDCC3; padding: 8px; border-radius: 4px;">
+                        <div style="font-size: 11px; color: #ffffff; font-weight: 600;">Break</div>
+                        <div style="font-size: 10px; color: #ffffff;">12:00 - 13:00</div>
+                    </div>
+                    <div style="background-color: #ffffff; padding: 8px;"></div>
+                    <div style="background-color: #ffffff; padding: 8px;"></div>
+                    <div style="background-color: #ffffff; padding: 8px;"></div>
+                    <div style="background-color: #C8E86C; padding: 8px; border-radius: 4px;">
+                        <div style="font-size: 11px; color: #0F4540; font-weight: 600;">Pendiente</div>
+                        <div style="font-size: 10px; color: #0F4540;">12:00 - 13:00</div>
+                    </div>
+                    
+                    <!-- 14:00 PM -->
+                    <div style="background-color: #ffffff; padding: 12px; text-align: center; font-size: 13px; color: #666666;">14:00</div>
+                    <div style="background-color: #ffffff; padding: 8px;"></div>
+                    <div style="background-color: #1F756E; padding: 8px; border-radius: 4px;">
+                        <div style="font-size: 11px; color: #ffffff; font-weight: 600;">Workshop</div>
+                        <div style="font-size: 10px; color: #E8F9F5;">14:00 - 16:00</div>
+                    </div>
+                    <div style="background-color: #ffffff; padding: 8px;"></div>
+                    <div style="background-color: #ffffff; padding: 8px;"></div>
+                    <div style="background-color: #1F756E; padding: 8px; border-radius: 4px;">
+                        <div style="font-size: 11px; color: #ffffff; font-weight: 600;">Cita</div>
+                        <div style="font-size: 10px; color: #E8F9F5;">14:00 - 15:00</div>
+                    </div>
+                    <div style="background-color: #ffffff; padding: 8px;"></div>
+                    <div style="background-color: #ffffff; padding: 8px;"></div>
+                    
+                    <!-- 16:00 PM -->
+                    <div style="background-color: #ffffff; padding: 12px; text-align: center; font-size: 13px; color: #666666;">16:00</div>
+                    <div style="background-color: #5DDCC3; padding: 8px; border-radius: 4px;">
+                        <div style="font-size: 11px; color: #ffffff; font-weight: 600;">Revisión</div>
+                        <div style="font-size: 10px; color: #ffffff;">16:00 - 17:00</div>
+                    </div>
+                    <div style="background-color: #ffffff; padding: 8px;"></div>
+                    <div style="background-color: #1F756E; padding: 8px; border-radius: 4px;">
+                        <div style="font-size: 11px; color: #ffffff; font-weight: 600;">Reunión</div>
+                        <div style="font-size: 10px; color: #E8F9F5;">16:00 - 17:00</div>
+                    </div>
+                    <div style="background-color: #ffffff; padding: 8px;"></div>
+                    <div style="background-color: #ffffff; padding: 8px;"></div>
+                    <div style="background-color: #1F756E; padding: 8px; border-radius: 4px;">
+                        <div style="font-size: 11px; color: #ffffff; font-weight: 600;">Presentación</div>
+                        <div style="font-size: 10px; color: #E8F9F5;">16:00 - 18:00</div>
+                    </div>
+                    <div style="background-color: #ffffff; padding: 8px;"></div>
+                </div>
+            </div>
+        </div>
+
+        <!-- Calendario Diario -->
+        <div class="section">
+            <h2>📅 Calendario Diario - Vista Detallada</h2>
+            
+            <div style="background-color: #ffffff; border: 2px solid #D4E8E3; border-radius: 12px; padding: 24px; max-width: 900px; margin: 0 auto;">
+                <div style="display: flex; justify-content: space-between; align-items: center; margin-bottom: 24px;">
+                    <button style="background: none; border: none; font-size: 24px; cursor: pointer; color: #1F756E; padding: 8px;">←</button>
+                    <div style="text-align: center;">
+                        <h3 style="font-weight: 700; font-size: 20px; color: #0F4540; margin-bottom: 4px;">Miércoles, 20 de Noviembre</h3>
+                        <p style="font-size: 14px; color: #666666;">7 eventos programados</p>
+                    </div>
+                    <button style="background: none; border: none; font-size: 24px; cursor: pointer; color: #1F756E; padding: 8px;">→</button>
+                </div>
+
+                <!-- Timeline -->
+                <div style="position: relative;">
+                    <!-- 8:00 AM -->
+                    <div style="display: flex; align-items: flex-start; margin-bottom: 20px;">
+                        <div style="width: 80px; padding-right: 16px; text-align: right; color: #666666; font-size: 14px; font-weight: 600;">08:00</div>
+                        <div style="flex: 1; background-color: #E8F9F5; border-left: 3px solid #D4E8E3; padding: 16px 20px; border-radius: 8px;">
+                            <div style="font-size: 13px; color: #999999;">Disponible</div>
+                        </div>
+                    </div>
+
+                    <!-- 9:00 AM -->
+                    <div style="display: flex; align-items: flex-start; margin-bottom: 20px;">
+                        <div style="width: 80px; padding-right: 16px; text-align: right; color: #666666; font-size: 14px; font-weight: 600;">09:00</div>
+                        <div style="flex: 1; background-color: #1F756E; border-left: 4px solid #0F4540; padding: 16px 20px; border-radius: 8px;">
+                            <div style="display: flex; justify-content: space-between; align-items: start; margin-bottom: 8px;">
+                                <div style="font-size: 16px; color: #ffffff; font-weight: 700;">Reunión de Equipo</div>
+                                <span style="padding: 4px 8px; background-color: #5DDCC3; color: #ffffff; font-size: 11px; font-weight: 600; border-radius: 4px;">1h</span>
+                            </div>
+                            <div style="font-size: 13px; color: #E8F9F5; margin-bottom: 8px;">📍 Sala de Conferencias A</div>
+                            <div style="font-size: 13px; color: #E8F9F5;">👥 8 participantes</div>
+                        </div>
+                    </div>
+
+                    <!-- 10:00 AM -->
+                    <div style="display: flex; align-items: flex-start; margin-bottom: 20px;">
+                        <div style="width: 80px; padding-right: 16px; text-align: right; color: #666666; font-size: 14px; font-weight: 600;">10:00</div>
+                        <div style="flex: 1; background-color: #E8F9F5; border-left: 3px solid #D4E8E3; padding: 16px 20px; border-radius: 8px;">
+                            <div style="font-size: 13px; color: #999999;">Disponible</div>
+                        </div>
+                    </div>
+
+                    <!-- 11:00 AM -->
+                    <div style="display: flex; align-items: flex-start; margin-bottom: 20px;">
+                        <div style="width: 80px; padding-right: 16px; text-align: right; color: #666666; font-size: 14px; font-weight: 600;">11:00</div>
+                        <div style="flex: 1; background-color: #5DDCC3; border-left: 4px solid #1F756E; padding: 16px 20px; border-radius: 8px;">
+                            <div style="display: flex; justify-content: space-between; align-items: start; margin-bottom: 8px;">
+                                <div style="font-size: 16px; color: #ffffff; font-weight: 700;">Consulta con Cliente</div>
+                                <span style="padding: 4px 8px; background-color: #ffffff; color: #1F756E; font-size: 11px; font-weight: 600; border-radius: 4px;">30m</span>
+                            </div>
+                            <div style="font-size: 13px; color: #ffffff; margin-bottom: 8px;">📞 Llamada virtual</div>
+                            <div style="font-size: 13px; color: #ffffff;">👤 María González</div>
+                        </div>
+                    </div>
+
+                    <!-- 12:00 PM -->
+                    <div style="display: flex; align-items: flex-start; margin-bottom: 20px;">
+                        <div style="width: 80px; padding-right: 16px; text-align: right; color: #666666; font-size: 14px; font-weight: 600;">12:00</div>
+                        <div style="flex: 1; background-color: #C8E86C; border-left: 3px solid #A3C247; padding: 16px 20px; border-radius: 8px;">
+                            <div style="font-size: 14px; color: #0F4540; font-weight: 600;">🍽️ Almuerzo</div>
+                        </div>
+                    </div>
+
+                    <!-- 14:00 PM -->
+                    <div style="display: flex; align-items: flex-start; margin-bottom: 20px;">
+                        <div style="width: 80px; padding-right: 16px; text-align: right; color: #666666; font-size: 14px; font-weight: 600;">14:00</div>
+                        <div style="flex: 1; background-color: #1F756E; border-left: 4px solid #0F4540; padding: 16px 20px; border-radius: 8px;">
+                            <div style="display: flex; justify-content: space-between; align-items: start; margin-bottom: 8px;">
+                                <div style="font-size: 16px; color: #ffffff; font-weight: 700;">Workshop de Diseño</div>
+                                <span style="padding: 4px 8px; background-color: #5DDCC3; color: #ffffff; font-size: 11px; font-weight: 600; border-radius: 4px;">2h</span>
+                            </div>
+                            <div style="font-size: 13px; color: #E8F9F5; margin-bottom: 8px;">📍 Espacio Creativo</div>
+                            <div style="font-size: 13px; color: #E8F9F5;">👥 15 participantes</div>
+                        </div>
+                    </div>
+
+                    <!-- 16:00 PM -->
+                    <div style="display: flex; align-items: flex-start; margin-bottom: 20px;">
+                        <div style="width: 80px; padding-right: 16px; text-align: right; color: #666666; font-size: 14px; font-weight: 600;">16:00</div>
+                        <div style="flex: 1; background-color: #D4E8E3; border-left: 3px dashed #1F756E; padding: 16px 20px; border-radius: 8px;">
+                            <div style="display: flex; justify-content: space-between; align-items: start; margin-bottom: 8px;">
+                                <div style="font-size: 16px; color: #0F4540; font-weight: 700;">Revisión de Proyecto</div>
+                                <span style="padding: 4px 8px; background-color: #C8E86C; color: #0F4540; font-size: 11px; font-weight: 600; border-radius: 4px;">Pendiente</span>
+                            </div>
+                            <div style="font-size: 13px; color: #0F4540;">⏰ Por confirmar</div>
+                        </div>
+                    </div>
+
+                    <!-- 17:00 PM -->
+                    <div style="display: flex; align-items: flex-start; margin-bottom: 20px;">
+                        <div style="width: 80px; padding-right: 16px; text-align: right; color: #666666; font-size: 14px; font-weight: 600;">17:00</div>
+                        <div style="flex: 1; background-color: #5DDCC3; border-left: 4px solid #1F756E; padding: 16px 20px; border-radius: 8px;">
+                            <div style="display: flex; justify-content: space-between; align-items: start; margin-bottom: 8px;">
+                                <div style="font-size: 16px; color: #ffffff; font-weight: 700;">Follow-up con equipo</div>
+                                <span style="padding: 4px 8px; background-color: #ffffff; color: #1F756E; font-size: 11px; font-weight: 600; border-radius: 4px;">45m</span>
+                            </div>
+                            <div style="font-size: 13px; color: #ffffff;">💻 Meeting virtual</div>
+                        </div>
+                    </div>
+
+                    <!-- 18:00 PM -->
+                    <div style="display: flex; align-items: flex-start;">
+                        <div style="width: 80px; padding-right: 16px; text-align: right; color: #666666; font-size: 14px; font-weight: 600;">18:00</div>
+                        <div style="flex: 1; background-color: #E8F9F5; border-left: 3px solid #D4E8E3; padding: 16px 20px; border-radius: 8px;">
+                            <div style="font-size: 13px; color: #999999;">Fin del día laboral</div>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- Resumen del día -->
+                <div style="margin-top: 24px; padding: 20px; background-color: #E8F9F5; border-radius: 8px; border: 2px solid #D4E8E3;">
+                    <h4 style="font-size: 14px; font-weight: 700; color: #0F4540; margin-bottom: 12px;">📊 Resumen del Día</h4>
+                    <div style="display: grid; grid-template-columns: repeat(4, 1fr); gap: 12px;">
+                        <div style="text-align: center;">
+                            <div style="font-size: 20px; font-weight: 700; color: #1F756E;">7</div>
+                            <div style="font-size: 11px; color: #666666;">Eventos</div>
+                        </div>
+                        <div style="text-align: center;">
+                            <div style="font-size: 20px; font-weight: 700; color: #1F756E;">6h</div>
+                            <div style="font-size: 11px; color: #666666;">Ocupado</div>
+                        </div>
+                        <div style="text-align: center;">
+                            <div style="font-size: 20px; font-weight: 700; color: #5DDCC3;">2h</div>
+                            <div style="font-size: 11px; color: #666666;">Libre</div>
+                        </div>
+                        <div style="text-align: center;">
+                            <div style="font-size: 20px; font-weight: 700; color: #C8E86C;">1</div>
+                            <div style="font-size: 11px; color: #666666;">Pendiente</div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+
+        <!-- Modales -->
+        <div class="section">
+            <h2>�� Modales</h2>
+            
+            <div style="max-width: 500px; margin: 0 auto;">
+                <!-- Modal de Confirmación -->
+                <div style="background-color: #ffffff; border: 2px solid #D4E8E3; border-radius: 12px; padding: 24px; box-shadow: 0 4px 16px rgba(0,0,0,0.15); margin-bottom: 20px;">
+                    <div style="text-align: center; margin-bottom: 20px;">
+                        <div style="width: 56px; height: 56px; background-color: #D4E8E3; border-radius: 50%; display: flex; align-items: center; justify-content: center; margin: 0 auto 12px; font-size: 28px;">✓</div>
+                        <h3 style="font-size: 20px; font-weight: 700; color: #0F4540; margin-bottom: 8px;">Confirmar Reserva</h3>
+                        <p style="font-size: 14px; color: #666666; line-height: 1.6;">¿Estás seguro de que deseas confirmar esta reserva para el 20 de Noviembre a las 14:00?</p>
+                    </div>
+                    <div style="display: flex; gap: 12px;">
+                        <button style="flex: 1; padding: 12px 24px; background-color: transparent; color: #666666; border: 2px solid #D4E8E3; border-radius: 8px; font-weight: 600; font-size: 15px; cursor: pointer;">Cancelar</button>
+                        <button style="flex: 1; padding: 12px 24px; background-color: #1F756E; color: #ffffff; border: none; border-radius: 8px; font-weight: 600; font-size: 15px; cursor: pointer;">Confirmar</button>
+                    </div>
+                </div>
+
+                <!-- Modal de Nueva Reserva -->
+                <div style="background-color: #ffffff; border: 2px solid #D4E8E3; border-radius: 12px; padding: 24px; box-shadow: 0 4px 16px rgba(0,0,0,0.15);">
+                    <div style="display: flex; justify-content: space-between; align-items: center; margin-bottom: 20px;">
+                        <h3 style="font-size: 18px; font-weight: 700; color: #0F4540;">Nueva Reserva</h3>
+                        <button style="background: none; border: none; font-size: 24px; color: #666666; cursor: pointer;">×</button>
+                    </div>
+                    
+                    <div style="margin-bottom: 16px;">
+                        <label style="display: block; margin-bottom: 6px; font-weight: 600; color: #0F4540; font-size: 14px;">Título</label>
+                        <input type="text" placeholder="Nombre del evento" style="width: 100%; padding: 10px 14px; border: 2px solid #D4E8E3; border-radius: 6px; font-size: 15px; outline: none;">
+                    </div>
+
+                    <div style="display: grid; grid-template-columns: 1fr 1fr; gap: 12px; margin-bottom: 16px;">
+                        <div>
+                            <label style="display: block; margin-bottom: 6px; font-weight: 600; color: #0F4540; font-size: 14px;">Fecha</label>
+                            <input type="date" value="2025-11-20" style="width: 100%; padding: 10px 14px; border: 2px solid #D4E8E3; border-radius: 6px; font-size: 14px; outline: none;">
+                        </div>
+                        <div>
+                            <label style="display: block; margin-bottom: 6px; font-weight: 600; color: #0F4540; font-size: 14px;">Hora</label>
+                            <input type="time" value="14:00" style="width: 100%; padding: 10px 14px; border: 2px solid #D4E8E3; border-radius: 6px; font-size: 14px; outline: none;">
+                        </div>
+                    </div>
+
+                    <div style="margin-bottom: 20px;">
+                        <label style="display: block; margin-bottom: 6px; font-weight: 600; color: #0F4540; font-size: 14px;">Notas</label>
+                        <textarea placeholder="Añade notas adicionales..." style="width: 100%; padding: 10px 14px; border: 2px solid #D4E8E3; border-radius: 6px; font-size: 14px; outline: none; min-height: 80px; resize: vertical;"></textarea>
+                    </div>
+
+                    <button style="width: 100%; padding: 12px 24px; background-color: #1F756E; color: #ffffff; border: none; border-radius: 8px; font-weight: 600; font-size: 15px; cursor: pointer;">Crear Reserva</button>
+                </div>
+            </div>
+        </div>
+
+        <!-- Tabla de Reservas -->
+        <div class="section">
+            <h2>📋 Tabla de Reservas</h2>
+            
+            <div style="background-color: #ffffff; border: 2px solid #D4E8E3; border-radius: 12px; overflow: hidden;">
+                <table style="width: 100%; border-collapse: collapse;">
+                    <thead>
+                        <tr style="background-color: #E8F9F5;">
+                            <th style="padding: 16px; text-align: left; font-weight: 700; color: #0F4540; font-size: 14px; border-bottom: 2px solid #D4E8E3;">Fecha</th>
+                            <th style="padding: 16px; text-align: left; font-weight: 700; color: #0F4540; font-size: 14px; border-bottom: 2px solid #D4E8E3;">Evento</th>
+                            <th style="padding: 16px; text-align: left; font-weight: 700; color: #0F4540; font-size: 14px; border-bottom: 2px solid #D4E8E3;">Cliente</th>
+                            <th style="padding: 16px; text-align: left; font-weight: 700; color: #0F4540; font-size: 14px; border-bottom: 2px solid #D4E8E3;">Estado</th>
+                            <th style="padding: 16px; text-align: left; font-weight: 700; color: #0F4540; font-size: 14px; border-bottom: 2px solid #D4E8E3;">Acciones</th>
+                        </tr>
+                    </thead>
+                    <tbody>
+                        <tr style="border-bottom: 1px solid #D4E8E3;">
+                            <td style="padding: 16px; color: #0F4540; font-size: 14px;">18 Nov, 9:00</td>
+                            <td style="padding: 16px; color: #0F4540; font-size: 14px; font-weight: 600;">Reunión de Equipo</td>
+                            <td style="padding: 16px; color: #666666; font-size: 14px;">Equipo Interno</td>
+                            <td style="padding: 16px;">
+                                <span style="padding: 4px 12px; background-color: #1F756E; color: #ffffff; font-size: 12px; font-weight: 600; border-radius: 20px;">Confirmado</span>
+                            </td>
+                            <td style="padding: 16px;">
+                                <button style="padding: 6px 12px; background-color: #D4E8E3; color: #1F756E; border: none; border-radius: 6px; font-size: 13px; font-weight: 600; cursor: pointer; margin-right: 6px;">Ver</button>
+                                <button style="padding: 6px 12px; background-color: transparent; color: #DC2626; border: 1px solid #DC2626; border-radius: 6px; font-size: 13px; font-weight: 600; cursor: pointer;">Cancelar</button>
+                            </td>
+                        </tr>
+                        <tr style="border-bottom: 1px solid #D4E8E3; background-color: #FAFAFA;">
+                            <td style="padding: 16px; color: #0F4540; font-size: 14px;">19 Nov, 14:00</td>
+                            <td style="padding: 16px; color: #0F4540; font-size: 14px; font-weight: 600;">Workshop de Diseño</td>
+                            <td style="padding: 16px; color: #666666; font-size: 14px;">15 participantes</td>
+                            <td style="padding: 16px;">
+                                <span style="padding: 4px 12px; background-color: #5DDCC3; color: #ffffff; font-size: 12px; font-weight: 600; border-radius: 20px;">Parcial</span>
+                            </td>
+                            <td style="padding: 16px;">
+                                <button style="padding: 6px 12px; background-color: #D4E8E3; color: #1F756E; border: none; border-radius: 6px; font-size: 13px; font-weight: 600; cursor: pointer; margin-right: 6px;">Ver</button>
+                                <button style="padding: 6px 12px; background-color: transparent; color: #DC2626; border: 1px solid #DC2626; border-radius: 6px; font-size: 13px; font-weight: 600; cursor: pointer;">Cancelar</button>
+                            </td>
+                        </tr>
+                        <tr style="border-bottom: 1px solid #D4E8E3;">
+                            <td style="padding: 16px; color: #0F4540; font-size: 14px;">20 Nov, 10:00</td>
+                            <td style="padding: 16px; color: #0F4540; font-size: 14px; font-weight: 600;">Evento Mint Fresh</td>
+                            <td style="padding: 16px; color: #666666; font-size: 14px;">María González</td>
+                            <td style="padding: 16px;">
+                                <span style="padding: 4px 12px; background-color: #C8E86C; color: #0F4540; font-size: 12px; font-weight: 600; border-radius: 20px;">Pendiente</span>
+                            </td>
+                            <td style="padding: 16px;">
+                                <button style="padding: 6px 12px; background-color: #D4E8E3; color: #1F756E; border: none; border-radius: 6px; font-size: 13px; font-weight: 600; cursor: pointer; margin-right: 6px;">Ver</button>
+                                <button style="padding: 6px 12px; background-color: transparent; color: #DC2626; border: 1px solid #DC2626; border-radius: 6px; font-size: 13px; font-weight: 600; cursor: pointer;">Cancelar</button>
+                            </td>
+                        </tr>
+                        <tr style="background-color: #FAFAFA;">
+                            <td style="padding: 16px; color: #0F4540; font-size: 14px;">22 Nov, 16:00</td>
+                            <td style="padding: 16px; color: #0F4540; font-size: 14px; font-weight: 600;">Presentación</td>
+                            <td style="padding: 16px; color: #666666; font-size: 14px;">Cliente Premium</td>
+                            <td style="padding: 16px;">
+                                <span style="padding: 4px 12px; background-color: #1F756E; color: #ffffff; font-size: 12px; font-weight: 600; border-radius: 20px;">Confirmado</span>
+                            </td>
+                            <td style="padding: 16px;">
+                                <button style="padding: 6px 12px; background-color: #D4E8E3; color: #1F756E; border: none; border-radius: 6px; font-size: 13px; font-weight: 600; cursor: pointer; margin-right: 6px;">Ver</button>
+                                <button style="padding: 6px 12px; background-color: transparent; color: #DC2626; border: 1px solid #DC2626; border-radius: 6px; font-size: 13px; font-weight: 600; cursor: pointer;">Cancelar</button>
+                            </td>
+                        </tr>
+                    </tbody>
+                </table>
+            </div>
+        </div>
+
+        <!-- Navegación y Paginación -->
+        <div class="section">
+            <h2>🔢 Paginación</h2>
+            
+            <div style="display: flex; justify-content: center; align-items: center; gap: 8px;">
+                <button style="padding: 8px 12px; background-color: #D4E8E3; color: #1F756E; border: none; border-radius: 6px; font-weight: 600; font-size: 14px; cursor: pointer;">← Anterior</button>
+                <button style="padding: 8px 14px; background-color: #1F756E; color: #ffffff; border: none; border-radius: 6px; font-weight: 600; font-size: 14px; cursor: pointer;">1</button>
+                <button style="padding: 8px 14px; background-color: transparent; color: #0F4540; border: 2px solid #D4E8E3; border-radius: 6px; font-weight: 600; font-size: 14px; cursor: pointer;">2</button>
+                <button style="padding: 8px 14px; background-color: transparent; color: #0F4540; border: 2px solid #D4E8E3; border-radius: 6px; font-weight: 600; font-size: 14px; cursor: pointer;">3</button>
+                <button style="padding: 8px 14px; background-color: transparent; color: #0F4540; border: 2px solid #D4E8E3; border-radius: 6px; font-weight: 600; font-size: 14px; cursor: pointer;">4</button>
+                <button style="padding: 8px 12px; background-color: #D4E8E3; color: #1F756E; border: none; border-radius: 6px; font-weight: 600; font-size: 14px; cursor: pointer;">Siguiente →</button>
+            </div>
+        </div>
+
+    </div>
+</body>
+</html>
