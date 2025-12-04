@@ -653,53 +653,53 @@ function App() {
               Tipografía
             </h3>
             <div className="bg-white border-2 border-beige rounded-xl p-8 space-y-8">
-            <div>
-              <h1 className="text-heading-1 text-primary font-bold mb-2">
-                Heading 1 - 3rem / 800
-              </h1>
-            </div>
+              <div>
+                <h1 className="text-heading-1 text-primary font-bold mb-2">
+                  Heading 1 - 3rem / 800
+                </h1>
+              </div>
 
-            <div>
-              <h2 className="text-heading-2 text-dark font-bold mb-2">
-                Heading 2 - 2rem / 700
-              </h2>
-            </div>
+              <div>
+                <h2 className="text-heading-2 text-dark font-bold mb-2">
+                  Heading 2 - 2rem / 700
+                </h2>
+              </div>
 
-            <div>
-              <h3 className="text-heading-3 text-primary font-bold mb-2">
-                Heading 3 - 1.5rem / 600
-              </h3>
-            </div>
+              <div>
+                <h3 className="text-heading-3 text-primary font-bold mb-2">
+                  Heading 3 - 1.5rem / 600
+                </h3>
+              </div>
 
-            <div>
-              <h4 className="text-heading-4 text-dark font-bold mb-2">
-                Heading 4 - 1.25rem / 600
-              </h4>
-            </div>
+              <div>
+                <h4 className="text-heading-4 text-dark font-bold mb-2">
+                  Heading 4 - 1.25rem / 600
+                </h4>
+              </div>
 
-            <div>
-              <h5 className="text-heading-5 text-dark font-bold mb-2">
-                Heading 5 - 1rem / 600
-              </h5>
-            </div>
+              <div>
+                <h5 className="text-heading-5 text-dark font-bold mb-2">
+                  Heading 5 - 1rem / 600
+                </h5>
+              </div>
 
-            <div>
-              <h6 className="text-heading-6 text-dark font-bold mb-2">
-                Heading 6 - 0.875rem / 600
-              </h6>
-            </div>
+              <div>
+                <h6 className="text-heading-6 text-dark font-bold mb-2">
+                  Heading 6 - 0.875rem / 600
+                </h6>
+              </div>
 
-            <div>
-              <p className="text-body text-dark mb-2">
-                Párrafo base - 1rem / 400
-              </p>
-            </div>
+              <div>
+                <p className="text-body text-dark mb-2">
+                  Párrafo base - 1rem / 400
+                </p>
+              </div>
 
-            <div>
-              <p className="text-body-small text-dark">
-                Texto pequeño - 0.875rem / 400
-              </p>
-            </div>
+              <div>
+                <p className="text-body-small text-dark">
+                  Texto pequeño - 0.875rem / 400
+                </p>
+              </div>
             </div>
           </div>
         </section>
