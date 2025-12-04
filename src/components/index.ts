@@ -27,3 +27,6 @@ export { default as CalendarReservations } from "./CalendarReservations";
 
 // Auth
 export { default as Auth } from "./Auth";
+
+// Color Palette
+export { ColorPalette, palettes } from "./ColorPalette";

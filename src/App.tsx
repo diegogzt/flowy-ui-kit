@@ -23,6 +23,8 @@ import {
   Calendar,
   Auth,
   CalendarReservations,
+  ColorPalette,
+  palettes,
 } from "./components";
 
 function App() {
@@ -629,10 +631,28 @@ function App() {
           className="mb-16 pb-12 border-b-2 border-beige scroll-mt-8"
         >
           <div className="bg-light rounded-lg px-4 py-2 mb-6 inline-block">
-            <h2 className="text-2xl font-bold text-dark">Tipografía</h2>
+            <h2 className="text-2xl font-bold text-dark">🌊 Flowy Original</h2>
           </div>
 
-          <div className="space-y-8">
+          {/* Color Palette */}
+          <div className="mb-8">
+            <h3 className="text-heading-3 text-primary font-bold mb-4">
+              Paleta de Colores
+            </h3>
+            <div className="bg-white border-2 border-beige rounded-xl p-8">
+              <p className="text-sm text-gray-500 mb-4">
+                Haz clic en cualquier color para copiarlo al portapapeles
+              </p>
+              <ColorPalette colors={palettes.flowy} />
+            </div>
+          </div>
+
+          {/* Typography */}
+          <div className="mb-8">
+            <h3 className="text-heading-3 text-primary font-bold mb-4">
+              Tipografía
+            </h3>
+            <div className="bg-white border-2 border-beige rounded-xl p-8 space-y-8">
             <div>
               <h1 className="text-heading-1 text-primary font-bold mb-2">
                 Heading 1 - 3rem / 800
@@ -679,6 +699,7 @@ function App() {
               <p className="text-body-small text-dark">
                 Texto pequeño - 0.875rem / 400
               </p>
+            </div>
             </div>
           </div>
         </section>
@@ -1119,6 +1140,19 @@ function App() {
             </h2>
           </div>
 
+          {/* Color Palette */}
+          <div className="mb-8">
+            <h3 className="text-heading-3 text-warm-primary font-bold mb-4">
+              Paleta de Colores
+            </h3>
+            <div className="bg-white border-2 border-warm-beige rounded-xl p-8">
+              <p className="text-sm text-gray-500 mb-4">
+                Haz clic en cualquier color para copiarlo al portapapeles
+              </p>
+              <ColorPalette colors={palettes.warm} />
+            </div>
+          </div>
+
           {/* Calendar with Reservations */}
           <div className="mb-12">
             <h3 className="text-heading-2 text-warm-primary font-bold mb-6">
@@ -1238,6 +1272,19 @@ function App() {
             <h2 className="text-4xl font-bold text-cool-dark">
               ❄️ Paleta Pastel Fría
             </h2>
+          </div>
+
+          {/* Color Palette */}
+          <div className="mb-8">
+            <h3 className="text-heading-3 text-cool-primary font-bold mb-4">
+              Paleta de Colores
+            </h3>
+            <div className="bg-white border-2 border-cool-beige rounded-xl p-8">
+              <p className="text-sm text-gray-500 mb-4">
+                Haz clic en cualquier color para copiarlo al portapapeles
+              </p>
+              <ColorPalette colors={palettes.cool} />
+            </div>
           </div>
 
           {/* Calendar with Reservations */}
@@ -1364,6 +1411,19 @@ function App() {
             </h2>
           </div>
 
+          {/* Color Palette */}
+          <div className="mb-8">
+            <h3 className="text-heading-3 text-contrast-primary font-bold mb-4">
+              Paleta de Colores
+            </h3>
+            <div className="bg-white border-2 border-contrast-beige rounded-xl p-8">
+              <p className="text-sm text-gray-500 mb-4">
+                Haz clic en cualquier color para copiarlo al portapapeles
+              </p>
+              <ColorPalette colors={palettes.contrast} />
+            </div>
+          </div>
+
           {/* Calendar with Reservations */}
           <div className="mb-12">
             <h3 className="text-heading-2 text-contrast-primary font-bold mb-6">
@@ -1483,6 +1543,19 @@ function App() {
             <h2 className="text-4xl font-bold text-mono-primary">
               ⚫ Paleta Monocromática
             </h2>
+          </div>
+
+          {/* Color Palette */}
+          <div className="mb-8">
+            <h3 className="text-heading-3 text-mono-primary font-bold mb-4">
+              Paleta de Colores
+            </h3>
+            <div className="bg-white border-2 border-mono-beige rounded-xl p-8">
+              <p className="text-sm text-gray-500 mb-4">
+                Haz clic en cualquier color para copiarlo al portapapeles
+              </p>
+              <ColorPalette colors={palettes.monochrome} />
+            </div>
           </div>
 
           {/* Calendar with Reservations */}
@@ -1609,6 +1682,19 @@ function App() {
             </h2>
           </div>
 
+          {/* Color Palette */}
+          <div className="mb-8">
+            <h3 className="text-heading-3 text-sunset-primary font-bold mb-4">
+              Paleta de Colores
+            </h3>
+            <div className="bg-white border-2 border-sunset-beige rounded-xl p-8">
+              <p className="text-sm text-gray-500 mb-4">
+                Haz clic en cualquier color para copiarlo al portapapeles
+              </p>
+              <ColorPalette colors={palettes.sunset} />
+            </div>
+          </div>
+
           {/* Calendar with Reservations */}
           <div className="mb-12">
             <h3 className="text-heading-2 text-sunset-primary font-bold mb-6">
@@ -1731,6 +1817,19 @@ function App() {
             <h2 className="text-4xl font-bold text-nature-dark">
               🌿 Paleta Nature
             </h2>
+          </div>
+
+          {/* Color Palette */}
+          <div className="mb-8">
+            <h3 className="text-heading-3 text-nature-primary font-bold mb-4">
+              Paleta de Colores
+            </h3>
+            <div className="bg-white border-2 border-nature-beige rounded-xl p-8">
+              <p className="text-sm text-gray-500 mb-4">
+                Haz clic en cualquier color para copiarlo al portapapeles
+              </p>
+              <ColorPalette colors={palettes.nature} />
+            </div>
           </div>
 
           {/* Calendar with Reservations */}
@@ -1857,6 +1956,19 @@ function App() {
             </h2>
           </div>
 
+          {/* Color Palette */}
+          <div className="mb-8">
+            <h3 className="text-heading-3 text-ocean-primary font-bold mb-4">
+              Paleta de Colores
+            </h3>
+            <div className="bg-white border-2 border-ocean-beige rounded-xl p-8">
+              <p className="text-sm text-gray-500 mb-4">
+                Haz clic en cualquier color para copiarlo al portapapeles
+              </p>
+              <ColorPalette colors={palettes.ocean} />
+            </div>
+          </div>
+
           {/* Calendar with Reservations */}
           <div className="mb-12">
             <h3 className="text-heading-2 text-ocean-primary font-bold mb-6">
@@ -1976,6 +2088,19 @@ function App() {
             <h2 className="text-4xl font-bold text-lavender-dark">
               💜 Paleta Lavender
             </h2>
+          </div>
+
+          {/* Color Palette */}
+          <div className="mb-8">
+            <h3 className="text-heading-3 text-lavender-primary font-bold mb-4">
+              Paleta de Colores
+            </h3>
+            <div className="bg-white border-2 border-lavender-beige rounded-xl p-8">
+              <p className="text-sm text-gray-500 mb-4">
+                Haz clic en cualquier color para copiarlo al portapapeles
+              </p>
+              <ColorPalette colors={palettes.lavender} />
+            </div>
           </div>
 
           {/* Calendar with Reservations */}
@@ -2100,6 +2225,19 @@ function App() {
             <h2 className="text-4xl font-bold text-tropical-dark">
               🌴 Paleta Tropical
             </h2>
+          </div>
+
+          {/* Color Palette */}
+          <div className="mb-8">
+            <h3 className="text-heading-3 text-tropical-primary font-bold mb-4">
+              Paleta de Colores
+            </h3>
+            <div className="bg-white border-2 border-tropical-beige rounded-xl p-8">
+              <p className="text-sm text-gray-500 mb-4">
+                Haz clic en cualquier color para copiarlo al portapapeles
+              </p>
+              <ColorPalette colors={palettes.tropical} />
+            </div>
           </div>
 
           {/* Calendar with Reservations */}
@@ -2229,6 +2367,19 @@ function App() {
             </h2>
           </div>
 
+          {/* Color Palette */}
+          <div className="mb-8">
+            <h3 className="text-heading-3 text-neon-secondary font-bold mb-4">
+              Paleta de Colores
+            </h3>
+            <div className="bg-black border-2 border-neon-primary rounded-xl p-8">
+              <p className="text-sm text-gray-400 mb-4">
+                Haz clic en cualquier color para copiarlo al portapapeles
+              </p>
+              <ColorPalette colors={palettes.neon} />
+            </div>
+          </div>
+
           {/* Calendar with Reservations */}
           <div className="mb-12">
             <h3 className="text-heading-2 text-neon-accent font-bold mb-6">
@@ -2353,6 +2504,19 @@ function App() {
             </h2>
           </div>
 
+          {/* Color Palette */}
+          <div className="mb-8">
+            <h3 className="text-heading-3 text-fire-primary font-bold mb-4">
+              Paleta de Colores
+            </h3>
+            <div className="bg-white border-2 border-fire-beige rounded-xl p-8">
+              <p className="text-sm text-gray-500 mb-4">
+                Haz clic en cualquier color para copiarlo al portapapeles
+              </p>
+              <ColorPalette colors={palettes.fire} />
+            </div>
+          </div>
+
           {/* Calendar with Reservations */}
           <div className="mb-12">
             <h3 className="text-heading-2 text-fire-primary font-bold mb-6">
@@ -2475,6 +2639,19 @@ function App() {
             <h2 className="text-4xl font-bold text-electric-dark">
               ⚡ Paleta Electric
             </h2>
+          </div>
+
+          {/* Color Palette */}
+          <div className="mb-8">
+            <h3 className="text-heading-3 text-electric-primary font-bold mb-4">
+              Paleta de Colores
+            </h3>
+            <div className="bg-white border-2 border-electric-beige rounded-xl p-8">
+              <p className="text-sm text-gray-500 mb-4">
+                Haz clic en cualquier color para copiarlo al portapapeles
+              </p>
+              <ColorPalette colors={palettes.electric} />
+            </div>
           </div>
 
           {/* Calendar with Reservations */}
@@ -2604,6 +2781,19 @@ function App() {
             </h2>
           </div>
 
+          {/* Color Palette */}
+          <div className="mb-8">
+            <h3 className="text-heading-3 text-mint-primary font-bold mb-4">
+              Paleta de Colores
+            </h3>
+            <div className="bg-white border-2 border-mint-beige rounded-xl p-8">
+              <p className="text-sm text-gray-500 mb-4">
+                Haz clic en cualquier color para copiarlo al portapapeles
+              </p>
+              <ColorPalette colors={palettes.mint} />
+            </div>
+          </div>
+
           {/* Calendar with Reservations */}
           <div className="mb-12">
             <h3 className="text-heading-2 text-mint-primary font-bold mb-6">
@@ -2729,6 +2919,19 @@ function App() {
             <h2 className="text-4xl font-bold text-purple-dark">
               ⚡ Paleta Purple Storm
             </h2>
+          </div>
+
+          {/* Color Palette */}
+          <div className="mb-8">
+            <h3 className="text-heading-3 text-purple-primary font-bold mb-4">
+              Paleta de Colores
+            </h3>
+            <div className="bg-white border-2 border-purple-beige rounded-xl p-8">
+              <p className="text-sm text-gray-500 mb-4">
+                Haz clic en cualquier color para copiarlo al portapapeles
+              </p>
+              <ColorPalette colors={palettes.purple} />
+            </div>
           </div>
 
           {/* Calendar with Reservations */}
@@ -2858,6 +3061,19 @@ function App() {
             </h2>
           </div>
 
+          {/* Color Palette */}
+          <div className="mb-8">
+            <h3 className="text-heading-3 text-meadow-primary font-bold mb-4">
+              Paleta de Colores
+            </h3>
+            <div className="bg-white border-2 border-meadow-beige rounded-xl p-8">
+              <p className="text-sm text-gray-500 mb-4">
+                Haz clic en cualquier color para copiarlo al portapapeles
+              </p>
+              <ColorPalette colors={palettes.meadow} />
+            </div>
+          </div>
+
           {/* Calendar with Reservations */}
           <div className="mb-12">
             <h3 className="text-heading-2 text-meadow-primary font-bold mb-6">
@@ -2980,6 +3196,19 @@ function App() {
             <h2 className="text-4xl font-bold text-twilight-dark">
               🌌 Paleta Twilight
             </h2>
+          </div>
+
+          {/* Color Palette */}
+          <div className="mb-8">
+            <h3 className="text-heading-3 text-twilight-primary font-bold mb-4">
+              Paleta de Colores
+            </h3>
+            <div className="bg-white border-2 border-twilight-beige rounded-xl p-8">
+              <p className="text-sm text-gray-500 mb-4">
+                Haz clic en cualquier color para copiarlo al portapapeles
+              </p>
+              <ColorPalette colors={palettes.twilight} />
+            </div>
           </div>
 
           {/* Calendar with Reservations */}
