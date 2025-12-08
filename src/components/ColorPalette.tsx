@@ -230,6 +230,16 @@ export const palettes = {
     { name: "Beige", value: "#E5E7EB" },
     { name: "Indigo", value: "#6366F1" },
   ],
+  vista: [
+    { name: "Primary", value: "#d56a34" },
+    { name: "Secondary", value: "#3f170e" },
+    { name: "Accent", value: "#f9f7e9" },
+    { name: "Dark", value: "#2a0f08" },
+    { name: "Light", value: "#fdfcf5" },
+    { name: "Beige", value: "#f4f1e0" },
+    { name: "Terracotta", value: "#c45a28" },
+    { name: "Cream", value: "#f0ead6" },
+  ],
 };
 
 export default ColorPalette;

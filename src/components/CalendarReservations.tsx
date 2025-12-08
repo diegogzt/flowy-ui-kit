@@ -24,7 +24,8 @@ interface CalendarReservationsProps {
     | "mint"
     | "purple"
     | "meadow"
-    | "twilight";
+    | "twilight"
+    | "vista";
 }
 
 const CalendarReservations = ({
@@ -145,6 +146,13 @@ const CalendarReservations = ({
       accent: "#F3F4F6",
       highlight: "#6366F1",
       dark: "#111827",
+    },
+    vista: {
+      primary: "#D56A34",
+      secondary: "#3F170E",
+      accent: "#F9F7E9",
+      highlight: "#C45A28",
+      dark: "#2A0F08",
     },
   };
 

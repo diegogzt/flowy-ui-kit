@@ -33,6 +33,49 @@ function App() {
     return sessionStorage.getItem("flowy_authenticated") === "true";
   });
   const [toggleState, setToggleState] = useState(false);
+  
+  // Estado para controlar qué paletas están visibles
+  const [visiblePalettes, setVisiblePalettes] = useState<Record<string, boolean>>({
+    flowy: true,
+    warm: true,
+    cool: true,
+    contrast: true,
+    monochrome: true,
+    sunset: true,
+    nature: true,
+    ocean: true,
+    lavender: true,
+    tropical: true,
+    neon: true,
+    fire: true,
+    electric: true,
+    mint: true,
+    purple: true,
+    meadow: true,
+    twilight: true,
+    vista: true,
+  });
+
+  const togglePalette = (paletteId: string) => {
+    setVisiblePalettes(prev => ({
+      ...prev,
+      [paletteId]: !prev[paletteId]
+    }));
+  };
+
+  const showAllPalettes = () => {
+    setVisiblePalettes(Object.keys(visiblePalettes).reduce((acc, key) => ({
+      ...acc,
+      [key]: true
+    }), {}));
+  };
+
+  const hideAllPalettes = () => {
+    setVisiblePalettes(Object.keys(visiblePalettes).reduce((acc, key) => ({
+      ...acc,
+      [key]: false
+    }), {}));
+  };
 
   if (!isAuthenticated) {
     return (
@@ -124,18 +167,40 @@ function App() {
       {/* Índice de Paletas */}
       <nav className="px-8 py-12 border-b-2 border-beige bg-gradient-to-br from-beige to-light">
         <div className="max-w-7xl mx-auto">
-          <h2 className="text-4xl font-bold text-primary mb-8 text-center">
+          <h2 className="text-4xl font-bold text-primary mb-4 text-center">
             🎨 Índice de Paletas de Colores
           </h2>
+          
+          {/* Controles de visibilidad */}
+          <div className="flex justify-center gap-4 mb-8">
+            <button
+              onClick={showAllPalettes}
+              className="px-4 py-2 bg-primary text-white rounded-lg font-semibold hover:opacity-90 transition-opacity"
+            >
+              👁️ Mostrar todas
+            </button>
+            <button
+              onClick={hideAllPalettes}
+              className="px-4 py-2 bg-dark text-white rounded-lg font-semibold hover:opacity-90 transition-opacity"
+            >
+              🙈 Ocultar todas
+            </button>
+          </div>
+          
+          <p className="text-center text-gray-600 mb-6">
+            Haz clic en una paleta para mostrar/ocultar su contenido
+          </p>
+          
           <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-4">
             {/* Original Flowy */}
-            <a
-              href="#flowy"
-              className="block p-4 rounded-lg border-2 border-gray-200 hover:border-primary hover:shadow-md transition-all bg-white"
+            <button
+              onClick={() => togglePalette('flowy')}
+              className={`block p-4 rounded-lg border-2 transition-all bg-white text-left ${visiblePalettes.flowy ? 'border-primary shadow-md' : 'border-gray-200 opacity-60 hover:opacity-100'}`}
             >
               <div className="flex items-center gap-3 mb-3">
                 <span className="text-2xl">🌊</span>
                 <h3 className="font-bold text-lg text-dark">Flowy Original</h3>
+                <span className="ml-auto text-sm">{visiblePalettes.flowy ? '👁️' : '🙈'}</span>
               </div>
               <div className="flex gap-2">
                 <div
@@ -155,16 +220,47 @@ function App() {
                   title="#2c1810"
                 ></div>
               </div>
-            </a>
+            </button>
+
+            {/* Vista (Logo) */}
+            <button
+              onClick={() => togglePalette('vista')}
+              className={`block p-4 rounded-lg border-2 transition-all bg-white text-left ${visiblePalettes.vista ? 'border-vista-primary shadow-md' : 'border-gray-200 opacity-60 hover:opacity-100'}`}
+            >
+              <div className="flex items-center gap-3 mb-3">
+                <span className="text-2xl">🎨</span>
+                <h3 className="font-bold text-lg text-dark">Vista (Logo)</h3>
+                <span className="ml-auto text-sm">{visiblePalettes.vista ? '👁️' : '🙈'}</span>
+              </div>
+              <div className="flex gap-2">
+                <div
+                  className="w-10 h-10 rounded-full bg-vista-primary border-2 border-white shadow-sm"
+                  title="#d56a34"
+                ></div>
+                <div
+                  className="w-10 h-10 rounded-full bg-vista-secondary border-2 border-white shadow-sm"
+                  title="#3f170e"
+                ></div>
+                <div
+                  className="w-10 h-10 rounded-full bg-vista-accent border-2 border-white shadow-sm"
+                  title="#f9f7e9"
+                ></div>
+                <div
+                  className="w-10 h-10 rounded-full bg-vista-terracotta border-2 border-white shadow-sm"
+                  title="#c45a28"
+                ></div>
+              </div>
+            </button>
 
             {/* Warm Pastel */}
-            <a
-              href="#warm"
-              className="block p-4 rounded-lg border-2 border-gray-200 hover:border-warm-primary hover:shadow-md transition-all bg-white"
+            <button
+              onClick={() => togglePalette('warm')}
+              className={`block p-4 rounded-lg border-2 transition-all bg-white text-left ${visiblePalettes.warm ? 'border-warm-primary shadow-md' : 'border-gray-200 opacity-60 hover:opacity-100'}`}
             >
               <div className="flex items-center gap-3 mb-3">
                 <span className="text-2xl">🌸</span>
                 <h3 className="font-bold text-lg text-dark">Warm Pastel</h3>
+                <span className="ml-auto text-sm">{visiblePalettes.warm ? '👁️' : '🙈'}</span>
               </div>
               <div className="flex gap-2">
                 <div
@@ -184,16 +280,17 @@ function App() {
                   title="#8B4513"
                 ></div>
               </div>
-            </a>
+            </button>
 
             {/* Cool Pastel */}
-            <a
-              href="#cool"
-              className="block p-4 rounded-lg border-2 border-gray-200 hover:border-cool-primary hover:shadow-md transition-all bg-white"
+            <button
+              onClick={() => togglePalette('cool')}
+              className={`block p-4 rounded-lg border-2 transition-all bg-white text-left ${visiblePalettes.cool ? 'border-cool-primary shadow-md' : 'border-gray-200 opacity-60 hover:opacity-100'}`}
             >
               <div className="flex items-center gap-3 mb-3">
                 <span className="text-2xl">❄️</span>
                 <h3 className="font-bold text-lg text-dark">Cool Pastel</h3>
+                <span className="ml-auto text-sm">{visiblePalettes.cool ? '👁️' : '🙈'}</span>
               </div>
               <div className="flex gap-2">
                 <div
@@ -213,16 +310,17 @@ function App() {
                   title="#2C3E50"
                 ></div>
               </div>
-            </a>
+            </button>
 
             {/* Contrast */}
-            <a
-              href="#contrast"
-              className="block p-4 rounded-lg border-2 border-gray-200 hover:border-contrast-primary hover:shadow-md transition-all bg-white"
+            <button
+              onClick={() => togglePalette('contrast')}
+              className={`block p-4 rounded-lg border-2 transition-all bg-white text-left ${visiblePalettes.contrast ? 'border-contrast-primary shadow-md' : 'border-gray-200 opacity-60 hover:opacity-100'}`}
             >
               <div className="flex items-center gap-3 mb-3">
                 <span className="text-2xl">🎯</span>
                 <h3 className="font-bold text-lg text-dark">Contrast</h3>
+                <span className="ml-auto text-sm">{visiblePalettes.contrast ? '👁️' : '🙈'}</span>
               </div>
               <div className="flex gap-2">
                 <div
@@ -242,16 +340,17 @@ function App() {
                   title="#1A535C"
                 ></div>
               </div>
-            </a>
+            </button>
 
             {/* Monochrome */}
-            <a
-              href="#monochrome"
-              className="block p-4 rounded-lg border-2 border-gray-200 hover:border-monochrome-primary hover:shadow-md transition-all bg-white"
+            <button
+              onClick={() => togglePalette('monochrome')}
+              className={`block p-4 rounded-lg border-2 transition-all bg-white text-left ${visiblePalettes.monochrome ? 'border-mono-primary shadow-md' : 'border-gray-200 opacity-60 hover:opacity-100'}`}
             >
               <div className="flex items-center gap-3 mb-3">
                 <span className="text-2xl">⚫</span>
                 <h3 className="font-bold text-lg text-dark">Monochrome</h3>
+                <span className="ml-auto text-sm">{visiblePalettes.monochrome ? '👁️' : '🙈'}</span>
               </div>
               <div className="flex gap-2">
                 <div
@@ -271,16 +370,17 @@ function App() {
                   title="#1C2833"
                 ></div>
               </div>
-            </a>
+            </button>
 
             {/* Sunset */}
-            <a
-              href="#sunset"
-              className="block p-4 rounded-lg border-2 border-gray-200 hover:border-sunset-primary hover:shadow-md transition-all bg-white"
+            <button
+              onClick={() => togglePalette('sunset')}
+              className={`block p-4 rounded-lg border-2 transition-all bg-white text-left ${visiblePalettes.sunset ? 'border-sunset-primary shadow-md' : 'border-gray-200 opacity-60 hover:opacity-100'}`}
             >
               <div className="flex items-center gap-3 mb-3">
                 <span className="text-2xl">🌅</span>
                 <h3 className="font-bold text-lg text-dark">Sunset</h3>
+                <span className="ml-auto text-sm">{visiblePalettes.sunset ? '👁️' : '🙈'}</span>
               </div>
               <div className="flex gap-2">
                 <div
@@ -300,16 +400,17 @@ function App() {
                   title="#8B4789"
                 ></div>
               </div>
-            </a>
+            </button>
 
             {/* Nature */}
-            <a
-              href="#nature"
-              className="block p-4 rounded-lg border-2 border-gray-200 hover:border-nature-primary hover:shadow-md transition-all bg-white"
+            <button
+              onClick={() => togglePalette('nature')}
+              className={`block p-4 rounded-lg border-2 transition-all bg-white text-left ${visiblePalettes.nature ? 'border-nature-primary shadow-md' : 'border-gray-200 opacity-60 hover:opacity-100'}`}
             >
               <div className="flex items-center gap-3 mb-3">
                 <span className="text-2xl">🌿</span>
                 <h3 className="font-bold text-lg text-dark">Nature</h3>
+                <span className="ml-auto text-sm">{visiblePalettes.nature ? '👁️' : '🙈'}</span>
               </div>
               <div className="flex gap-2">
                 <div
@@ -329,16 +430,17 @@ function App() {
                   title="#1B4332"
                 ></div>
               </div>
-            </a>
+            </button>
 
             {/* Ocean */}
-            <a
-              href="#ocean"
-              className="block p-4 rounded-lg border-2 border-gray-200 hover:border-ocean-primary hover:shadow-md transition-all bg-white"
+            <button
+              onClick={() => togglePalette('ocean')}
+              className={`block p-4 rounded-lg border-2 transition-all bg-white text-left ${visiblePalettes.ocean ? 'border-ocean-primary shadow-md' : 'border-gray-200 opacity-60 hover:opacity-100'}`}
             >
               <div className="flex items-center gap-3 mb-3">
                 <span className="text-2xl">🌊</span>
                 <h3 className="font-bold text-lg text-dark">Ocean</h3>
+                <span className="ml-auto text-sm">{visiblePalettes.ocean ? '👁️' : '🙈'}</span>
               </div>
               <div className="flex gap-2">
                 <div
@@ -358,16 +460,17 @@ function App() {
                   title="#023047"
                 ></div>
               </div>
-            </a>
+            </button>
 
             {/* Lavender */}
-            <a
-              href="#lavender"
-              className="block p-4 rounded-lg border-2 border-gray-200 hover:border-lavender-primary hover:shadow-md transition-all bg-white"
+            <button
+              onClick={() => togglePalette('lavender')}
+              className={`block p-4 rounded-lg border-2 transition-all bg-white text-left ${visiblePalettes.lavender ? 'border-lavender-primary shadow-md' : 'border-gray-200 opacity-60 hover:opacity-100'}`}
             >
               <div className="flex items-center gap-3 mb-3">
                 <span className="text-2xl">💜</span>
                 <h3 className="font-bold text-lg text-dark">Lavender</h3>
+                <span className="ml-auto text-sm">{visiblePalettes.lavender ? '👁️' : '🙈'}</span>
               </div>
               <div className="flex gap-2">
                 <div
@@ -387,16 +490,17 @@ function App() {
                   title="#5D4E6D"
                 ></div>
               </div>
-            </a>
+            </button>
 
             {/* Tropical */}
-            <a
-              href="#tropical"
-              className="block p-4 rounded-lg border-2 border-gray-200 hover:border-tropical-primary hover:shadow-md transition-all bg-white"
+            <button
+              onClick={() => togglePalette('tropical')}
+              className={`block p-4 rounded-lg border-2 transition-all bg-white text-left ${visiblePalettes.tropical ? 'border-tropical-primary shadow-md' : 'border-gray-200 opacity-60 hover:opacity-100'}`}
             >
               <div className="flex items-center gap-3 mb-3">
                 <span className="text-2xl">🌴</span>
                 <h3 className="font-bold text-lg text-dark">Tropical</h3>
+                <span className="ml-auto text-sm">{visiblePalettes.tropical ? '👁️' : '🙈'}</span>
               </div>
               <div className="flex gap-2">
                 <div
@@ -416,16 +520,17 @@ function App() {
                   title="#F39C12"
                 ></div>
               </div>
-            </a>
+            </button>
 
             {/* Neon */}
-            <a
-              href="#neon"
-              className="block p-4 rounded-lg border-2 border-neon-primary hover:border-neon-secondary hover:shadow-lg hover:shadow-neon-primary/30 transition-all bg-black"
+            <button
+              onClick={() => togglePalette('neon')}
+              className={`block p-4 rounded-lg border-2 transition-all text-left ${visiblePalettes.neon ? 'border-neon-primary shadow-lg shadow-neon-primary/30 bg-black' : 'border-gray-200 opacity-60 hover:opacity-100 bg-gray-900'}`}
             >
               <div className="flex items-center gap-3 mb-3">
                 <span className="text-2xl">⚡</span>
                 <h3 className="font-bold text-lg text-neon-primary">Neon</h3>
+                <span className="ml-auto text-sm">{visiblePalettes.neon ? '👁️' : '🙈'}</span>
               </div>
               <div className="flex gap-2">
                 <div
@@ -445,16 +550,17 @@ function App() {
                   title="#FFFFFF"
                 ></div>
               </div>
-            </a>
+            </button>
 
             {/* Fire */}
-            <a
-              href="#fire"
-              className="block p-4 rounded-lg border-2 border-gray-200 hover:border-fire-primary hover:shadow-md transition-all bg-white"
+            <button
+              onClick={() => togglePalette('fire')}
+              className={`block p-4 rounded-lg border-2 transition-all bg-white text-left ${visiblePalettes.fire ? 'border-fire-primary shadow-md' : 'border-gray-200 opacity-60 hover:opacity-100'}`}
             >
               <div className="flex items-center gap-3 mb-3">
                 <span className="text-2xl">🔥</span>
                 <h3 className="font-bold text-lg text-dark">Fire</h3>
+                <span className="ml-auto text-sm">{visiblePalettes.fire ? '👁️' : '🙈'}</span>
               </div>
               <div className="flex gap-2">
                 <div
@@ -474,16 +580,17 @@ function App() {
                   title="#8B0000"
                 ></div>
               </div>
-            </a>
+            </button>
 
             {/* Electric */}
-            <a
-              href="#electric"
-              className="block p-4 rounded-lg border-2 border-gray-200 hover:border-electric-primary hover:shadow-md transition-all bg-white"
+            <button
+              onClick={() => togglePalette('electric')}
+              className={`block p-4 rounded-lg border-2 transition-all bg-white text-left ${visiblePalettes.electric ? 'border-electric-primary shadow-md' : 'border-gray-200 opacity-60 hover:opacity-100'}`}
             >
               <div className="flex items-center gap-3 mb-3">
                 <span className="text-2xl">⚡</span>
                 <h3 className="font-bold text-lg text-dark">Electric</h3>
+                <span className="ml-auto text-sm">{visiblePalettes.electric ? '👁️' : '🙈'}</span>
               </div>
               <div className="flex gap-2">
                 <div
@@ -503,16 +610,17 @@ function App() {
                   title="#0A0E27"
                 ></div>
               </div>
-            </a>
+            </button>
 
             {/* Mint Fresh */}
-            <a
-              href="#mint"
-              className="block p-4 rounded-lg border-2 border-gray-200 hover:border-mint-primary hover:shadow-md transition-all bg-white"
+            <button
+              onClick={() => togglePalette('mint')}
+              className={`block p-4 rounded-lg border-2 transition-all bg-white text-left ${visiblePalettes.mint ? 'border-mint-primary shadow-md' : 'border-gray-200 opacity-60 hover:opacity-100'}`}
             >
               <div className="flex items-center gap-3 mb-3">
                 <span className="text-2xl">🌿</span>
                 <h3 className="font-bold text-lg text-dark">Mint Fresh</h3>
+                <span className="ml-auto text-sm">{visiblePalettes.mint ? '👁️' : '🙈'}</span>
               </div>
               <div className="flex gap-2">
                 <div
@@ -532,16 +640,17 @@ function App() {
                   title="#D3EB70"
                 ></div>
               </div>
-            </a>
+            </button>
 
             {/* Purple Storm */}
-            <a
-              href="#purple"
-              className="block p-4 rounded-lg border-2 border-gray-200 hover:border-purple-primary hover:shadow-md transition-all bg-white"
+            <button
+              onClick={() => togglePalette('purple')}
+              className={`block p-4 rounded-lg border-2 transition-all bg-white text-left ${visiblePalettes.purple ? 'border-purple-primary shadow-md' : 'border-gray-200 opacity-60 hover:opacity-100'}`}
             >
               <div className="flex items-center gap-3 mb-3">
                 <span className="text-2xl">⚡</span>
                 <h3 className="font-bold text-lg text-dark">Purple Storm</h3>
+                <span className="ml-auto text-sm">{visiblePalettes.purple ? '👁️' : '🙈'}</span>
               </div>
               <div className="flex gap-2">
                 <div
@@ -561,16 +670,17 @@ function App() {
                   title="#1E293B"
                 ></div>
               </div>
-            </a>
+            </button>
 
             {/* Meadow */}
-            <a
-              href="#meadow"
-              className="block p-4 rounded-lg border-2 border-gray-200 hover:border-meadow-primary hover:shadow-md transition-all bg-white"
+            <button
+              onClick={() => togglePalette('meadow')}
+              className={`block p-4 rounded-lg border-2 transition-all bg-white text-left ${visiblePalettes.meadow ? 'border-meadow-primary shadow-md' : 'border-gray-200 opacity-60 hover:opacity-100'}`}
             >
               <div className="flex items-center gap-3 mb-3">
                 <span className="text-2xl">🍃</span>
                 <h3 className="font-bold text-lg text-dark">Meadow</h3>
+                <span className="ml-auto text-sm">{visiblePalettes.meadow ? '👁️' : '🙈'}</span>
               </div>
               <div className="flex gap-2">
                 <div
@@ -590,16 +700,17 @@ function App() {
                   title="#B8F1E8"
                 ></div>
               </div>
-            </a>
+            </button>
 
             {/* Twilight */}
-            <a
-              href="#twilight"
-              className="block p-4 rounded-lg border-2 border-gray-200 hover:border-twilight-primary hover:shadow-md transition-all bg-white"
+            <button
+              onClick={() => togglePalette('twilight')}
+              className={`block p-4 rounded-lg border-2 transition-all bg-white text-left ${visiblePalettes.twilight ? 'border-twilight-primary shadow-md' : 'border-gray-200 opacity-60 hover:opacity-100'}`}
             >
               <div className="flex items-center gap-3 mb-3">
                 <span className="text-2xl">🌌</span>
                 <h3 className="font-bold text-lg text-dark">Twilight</h3>
+                <span className="ml-auto text-sm">{visiblePalettes.twilight ? '👁️' : '🙈'}</span>
               </div>
               <div className="flex gap-2">
                 <div
@@ -619,13 +730,15 @@ function App() {
                   title="#111827"
                 ></div>
               </div>
-            </a>
+            </button>
           </div>
         </div>
       </nav>
 
       <div className="px-8 py-12">
-        {/* Typography Section */}
+        {/* Flowy Section */}
+        {visiblePalettes.flowy && (
+        <>
         <section
           id="flowy"
           className="mb-16 pb-12 border-b-2 border-beige scroll-mt-8"
@@ -1131,8 +1244,124 @@ function App() {
             </div>
           </div>
         </section>
+        </>
+        )}
+
+        {/* PALETA VISTA LOGOS */}
+        {visiblePalettes.vista && (
+        <section id="vista" className="mb-16 pb-12 border-b-2 border-vista-beige scroll-mt-8">
+          <div className="bg-vista-accent rounded-lg px-4 py-2 mb-6 inline-block">
+            <h2 className="text-4xl font-bold text-vista-secondary">
+              🏔️ Vista Logos
+            </h2>
+          </div>
+
+          {/* Color Palette */}
+          <div className="mb-8">
+            <h3 className="text-heading-3 text-vista-primary font-bold mb-4">
+              Paleta de Colores
+            </h3>
+            <div className="bg-white border-2 border-vista-beige rounded-xl p-8">
+              <p className="text-sm text-gray-500 mb-4">
+                Haz clic en cualquier color para copiarlo al portapapeles
+              </p>
+              <ColorPalette colors={palettes.vista} />
+            </div>
+          </div>
+
+          {/* Calendar with Reservations */}
+          <div className="mb-12">
+            <h3 className="text-heading-2 text-vista-primary font-bold mb-6">
+              Calendario con Reservas
+            </h3>
+            <div className="bg-white border-2 border-vista-beige rounded-xl p-8">
+              <CalendarReservations palette="vista" />
+            </div>
+          </div>
+
+          {/* Buttons */}
+          <div className="mb-8">
+            <h3 className="text-heading-3 text-vista-primary font-bold mb-4">
+              Botones
+            </h3>
+            <div className="bg-white border-2 border-vista-beige rounded-xl p-8 flex flex-wrap gap-4">
+              <button className="px-6 py-3 bg-vista-primary text-white rounded-lg font-semibold hover:opacity-90 transition-opacity">
+                Primario
+              </button>
+              <button className="px-6 py-3 bg-vista-secondary text-vista-accent rounded-lg font-semibold hover:opacity-90 transition-opacity">
+                Secundario
+              </button>
+              <button className="px-6 py-3 bg-vista-terracotta text-white rounded-lg font-semibold hover:opacity-90 transition-opacity">
+                Terracotta
+              </button>
+              <button className="px-6 py-3 border-2 border-vista-primary text-vista-primary rounded-lg font-semibold hover:bg-vista-light transition-colors">
+                Outline
+              </button>
+              <button className="px-6 py-3 text-vista-primary font-semibold hover:bg-vista-light rounded-lg transition-colors">
+                Ghost
+              </button>
+            </div>
+          </div>
+
+          {/* Cards */}
+          <div className="mb-8">
+            <h3 className="text-heading-3 text-vista-primary font-bold mb-4">
+              Tarjetas
+            </h3>
+            <div className="grid grid-cols-1 md:grid-cols-3 gap-6">
+              <div className="bg-vista-cream border-2 border-vista-beige rounded-xl p-6">
+                <h4 className="text-lg font-bold text-vista-secondary mb-2">
+                  Tarjeta Standard
+                </h4>
+                <p className="text-vista-dark">
+                  Contenido de ejemplo con colores de Vista.
+                </p>
+              </div>
+              <div className="bg-vista-light border-2 border-vista-primary rounded-xl p-6">
+                <h4 className="text-lg font-bold text-vista-primary mb-2">
+                  Tarjeta Destacada
+                </h4>
+                <p className="text-vista-secondary">
+                  Contenido con borde primario.
+                </p>
+              </div>
+              <div className="bg-vista-secondary text-vista-accent rounded-xl p-6">
+                <h4 className="text-lg font-bold mb-2">Tarjeta Dark</h4>
+                <p className="text-vista-cream">
+                  Contenido con fondo oscuro.
+                </p>
+              </div>
+            </div>
+          </div>
+
+          {/* Alerts */}
+          <div className="mb-8">
+            <h3 className="text-heading-3 text-vista-primary font-bold mb-4">
+              Alertas
+            </h3>
+            <div className="space-y-4">
+              <div className="bg-vista-primary bg-opacity-20 border-l-4 border-vista-primary p-4 rounded">
+                <p className="text-vista-secondary font-semibold">
+                  ✓ Operación completada exitosamente
+                </p>
+              </div>
+              <div className="bg-vista-terracotta bg-opacity-20 border-l-4 border-vista-terracotta p-4 rounded">
+                <p className="text-vista-secondary font-semibold">
+                  ⚠ Advertencia: verifica los datos
+                </p>
+              </div>
+              <div className="bg-vista-accent border-l-4 border-vista-secondary p-4 rounded">
+                <p className="text-vista-secondary font-semibold">
+                  ℹ Información importante
+                </p>
+              </div>
+            </div>
+          </div>
+        </section>
+        )}
 
         {/* PALETA PASTEL CÁLIDA */}
+        {visiblePalettes.warm && (
         <section className="mb-16 pb-12 border-b-2 border-warm-beige">
           <div className="bg-warm-light rounded-lg px-4 py-2 mb-6 inline-block">
             <h2 className="text-4xl font-bold text-warm-dark">
@@ -1265,8 +1494,10 @@ function App() {
             </div>
           </div>
         </section>
+        )}
 
         {/* PALETA PASTEL FRÍA */}
+        {visiblePalettes.cool && (
         <section className="mb-16 pb-12 border-b-2 border-cool-beige">
           <div className="bg-cool-light rounded-lg px-4 py-2 mb-6 inline-block">
             <h2 className="text-4xl font-bold text-cool-dark">
@@ -1399,8 +1630,10 @@ function App() {
             </div>
           </div>
         </section>
+        )}
 
         {/* PALETA DE CONTRASTE */}
+        {visiblePalettes.contrast && (
         <section
           id="contrast"
           className="mb-16 pb-12 border-b-2 border-contrast-beige scroll-mt-8"
@@ -1536,8 +1769,10 @@ function App() {
             </div>
           </div>
         </section>
+        )}
 
         {/* PALETA MONOCROMÁTICA */}
+        {visiblePalettes.monochrome && (
         <section className="pb-12">
           <div className="bg-mono-light rounded-lg px-4 py-2 mb-6 inline-block">
             <h2 className="text-4xl font-bold text-mono-primary">
@@ -1670,8 +1905,10 @@ function App() {
             </div>
           </div>
         </section>
+        )}
 
         {/* PALETA SUNSET (ATARDECER) */}
+        {visiblePalettes.sunset && (
         <section
           id="sunset"
           className="mb-16 pb-12 border-b-2 border-sunset-beige scroll-mt-8"
@@ -1807,8 +2044,10 @@ function App() {
             </div>
           </div>
         </section>
+        )}
 
         {/* PALETA NATURE (NATURALEZA) */}
+        {visiblePalettes.nature && (
         <section
           id="nature"
           className="mb-16 pb-12 border-b-2 border-nature-beige scroll-mt-8"
@@ -1944,8 +2183,10 @@ function App() {
             </div>
           </div>
         </section>
+        )}
 
         {/* PALETA OCEAN (OCÉANO) */}
+        {visiblePalettes.ocean && (
         <section
           id="ocean"
           className="mb-16 pb-12 border-b-2 border-ocean-beige scroll-mt-8"
@@ -2081,8 +2322,10 @@ function App() {
             </div>
           </div>
         </section>
+        )}
 
         {/* PALETA LAVENDER (LAVANDA) */}
+        {visiblePalettes.lavender && (
         <section className="pb-12">
           <div className="bg-lavender-light rounded-lg px-4 py-2 mb-6 inline-block">
             <h2 className="text-4xl font-bold text-lavender-dark">
@@ -2215,8 +2458,10 @@ function App() {
             </div>
           </div>
         </section>
+        )}
 
         {/* PALETA TROPICAL (ALTO CONTRASTE) */}
+        {visiblePalettes.tropical && (
         <section
           id="tropical"
           className="mb-16 pb-12 border-b-2 border-tropical-beige scroll-mt-8"
@@ -2355,8 +2600,10 @@ function App() {
             </div>
           </div>
         </section>
+        )}
 
         {/* PALETA NEON (ALTO CONTRASTE) */}
+        {visiblePalettes.neon && (
         <section
           id="neon"
           className="mb-16 pb-12 border-b-2 border-neon-beige bg-neon-dark scroll-mt-8"
@@ -2492,8 +2739,10 @@ function App() {
             </div>
           </div>
         </section>
+        )}
 
         {/* PALETA FIRE (FUEGO - ALTO CONTRASTE) */}
+        {visiblePalettes.fire && (
         <section
           id="fire"
           className="mb-16 pb-12 border-b-2 border-fire-beige scroll-mt-8"
@@ -2632,8 +2881,10 @@ function App() {
             </div>
           </div>
         </section>
+        )}
 
         {/* PALETA ELECTRIC (ELÉCTRICA - ALTO CONTRASTE) */}
+        {visiblePalettes.electric && (
         <section id="electric" className="pb-12 scroll-mt-8">
           <div className="bg-electric-light rounded-lg px-4 py-2 mb-6 inline-block border-2 border-electric-primary">
             <h2 className="text-4xl font-bold text-electric-dark">
@@ -2769,8 +3020,10 @@ function App() {
             </div>
           </div>
         </section>
+        )}
 
         {/* PALETA MINT FRESH */}
+        {visiblePalettes.mint && (
         <section
           id="mint"
           className="mb-16 pb-12 border-b-2 border-mint-beige scroll-mt-8"
@@ -2909,8 +3162,10 @@ function App() {
             </div>
           </div>
         </section>
+        )}
 
         {/* PALETA PURPLE STORM */}
+        {visiblePalettes.purple && (
         <section
           id="purple"
           className="mb-16 pb-12 border-b-2 border-purple-beige scroll-mt-8"
@@ -3049,8 +3304,10 @@ function App() {
             </div>
           </div>
         </section>
+        )}
 
         {/* PALETA MEADOW */}
+        {visiblePalettes.meadow && (
         <section
           id="meadow"
           className="mb-16 pb-12 border-b-2 border-meadow-beige scroll-mt-8"
@@ -3189,8 +3446,10 @@ function App() {
             </div>
           </div>
         </section>
+        )}
 
         {/* PALETA TWILIGHT */}
+        {visiblePalettes.twilight && (
         <section id="twilight" className="pb-12 scroll-mt-8">
           <div className="bg-twilight-light rounded-lg px-4 py-2 mb-6 inline-block">
             <h2 className="text-4xl font-bold text-twilight-dark">
@@ -3326,6 +3585,7 @@ function App() {
             </div>
           </div>
         </section>
+        )}
       </div>
     </div>
   );

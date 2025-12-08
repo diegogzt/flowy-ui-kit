@@ -153,6 +153,16 @@ module.exports = {
         "twilight-light": "#FAFBFC",
         "twilight-beige": "#E5E7EB",
         "twilight-indigo": "#6366F1", // Índigo más claro
+
+        // Paleta Vista (Basada en los colores del logo)
+        "vista-primary": "#d56a34", // Naranja terracota del logo
+        "vista-secondary": "#3f170e", // Marrón oscuro del logo
+        "vista-accent": "#f9f7e9", // Crema claro del logo
+        "vista-dark": "#2a0f08", // Marrón más oscuro
+        "vista-light": "#fdfcf5", // Blanco crema
+        "vista-beige": "#f4f1e0", // Beige suave
+        "vista-terracotta": "#c45a28", // Terracota más intenso
+        "vista-cream": "#f0ead6", // Crema medio
       },
       fontFamily: {
         sans: ["Inter", "system-ui", "-apple-system", "sans-serif"],
